@@ -22,7 +22,7 @@ public class Funcionario extends Pessoa{
         this.cpf = cpf;
         this.rg = rg;
         this.usuario = usuario;
-        this.senha = senha;
+        this.senha = senha;     
     }
 
     public String getCpf() {
@@ -66,6 +66,6 @@ public class Funcionario extends Pessoa{
                 + this.getRg() + ", " 
                 + this.getUsuario() + ", " 
                 + this.getSenha();
-
+        
     }
 }

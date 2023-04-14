@@ -18,11 +18,13 @@ public class Compra {
     private char flagTipoDesconto;
     private char status;
     private String observacao;
+    private Fornecedor fornecedor;
+    
 
     public Compra() {
     }
 
-    public Compra(int id, int numeroNF, DateTimeFormatter dataHoraCompra, float valorDesconto, char flagTipoDesconto, char status, String observacao) {
+    public Compra(int id, int numeroNF, DateTimeFormatter dataHoraCompra, float valorDesconto, char flagTipoDesconto, char status, String observacao, Fornecedor fornecedor) {
         this.id = id;
         this.numeroNF = numeroNF;
         this.dataHoraCompra = dataHoraCompra;
@@ -30,8 +32,9 @@ public class Compra {
         this.flagTipoDesconto = flagTipoDesconto;
         this.status = status;
         this.observacao = observacao;
+        this.fornecedor = fornecedor;
     }
-
+   
     public int getId() {
         return id;
     }
@@ -88,9 +91,25 @@ public class Compra {
         this.observacao = observacao;
     }
 
+    public Fornecedor getFornecedor() {
+        return fornecedor;
+    }
+
+    public void setFornecedor(Fornecedor fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+    
+
     @Override
     public String toString() {
-        return this.getId() + ", " + this.getNumeroNF() + ", " + this.getDataHoraCompra() + ", " + this.getValorDesconto() + ", " + this.getFlagTipoDesconto() + ", " + this.getStatus() + ", " + this.getObservacao();
+        return this.getId() + ", " 
+                + this.getFornecedor() + ", "
+                + this.getNumeroNF() + ", " 
+                + this.getDataHoraCompra() + ", " 
+                + this.getValorDesconto() + ", " 
+                + this.getFlagTipoDesconto() + ", " 
+                + this.getStatus() + ", " 
+                + this.getObservacao();
 
     }
 }

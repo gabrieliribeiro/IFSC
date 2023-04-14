@@ -17,17 +17,23 @@ public class Venda {
     private char flagTipoDesconto;
     private String observacao;
     private char status;
+    private Carteirinha carteirinha;
+    private Funcionario funcionario;
+    private ItemVenda itemVenda;
 
     public Venda() {
     }
 
-    public Venda(int id, DateTimeFormatter dataHoraVenda, float valorDesconto, char flagTipoDesconto, String observacao, char status) {
+    public Venda(int id, DateTimeFormatter dataHoraVenda, float valorDesconto, char flagTipoDesconto, String observacao, char status, Carteirinha carteirinha, Funcionario funcionario, ItemVenda itemVenda) {
         this.id = id;
         this.dataHoraVenda = dataHoraVenda;
         this.valorDesconto = valorDesconto;
         this.flagTipoDesconto = flagTipoDesconto;
         this.observacao = observacao;
         this.status = status;
+        this.carteirinha = carteirinha;
+        this.funcionario = funcionario;
+        this.itemVenda = itemVenda;
     }
 
     public int getId() {
@@ -78,9 +84,43 @@ public class Venda {
         this.status = status;
     }
 
+    public Carteirinha getCarteirinha() {
+        return carteirinha;
+    }
+
+    public void setCarteirinha(Carteirinha carteirinha) {
+        this.carteirinha = carteirinha;
+    }
+
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
+    }
+
+    public ItemVenda getItemVenda() {
+        return itemVenda;
+    }
+
+    public void setItemVenda(ItemVenda itemVenda) {
+        this.itemVenda = itemVenda;
+    }
+   
+    
+
     @Override
     public String toString() {
-        return this.getId() + ", " + this.getDataHoraVenda() + ", " + this.getValorDesconto() + ", " + this.getFlagTipoDesconto() + ", " + this.getObservacao() + ", " + this.getStatus();
+        return this.getId() + ", " 
+                + this.getCarteirinha() + ", "
+                + this.getFuncionario() + ", "
+                + this.getItemVenda() + ", "
+                + this.getDataHoraVenda() + ", "
+                + this.getValorDesconto() + ", " 
+                + this.getFlagTipoDesconto() + ", " 
+                + this.getObservacao() + ", " 
+                + this.getStatus();
 
     }
 }

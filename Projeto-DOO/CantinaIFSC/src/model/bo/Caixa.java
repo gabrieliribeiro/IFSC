@@ -18,11 +18,12 @@ public class Caixa {
     private float valorFechamento;
     private String observaccao;
     private char status;
+    private Funcionario funcionario;
 
     public Caixa() {
     }
 
-    public Caixa(int id, DateTimeFormatter dataHoraAbertura, DateTimeFormatter dataHoraFechamento, float valorAbertura, float valorFechamento, String observaccao, char status) {
+    public Caixa(int id, DateTimeFormatter dataHoraAbertura, DateTimeFormatter dataHoraFechamento, float valorAbertura, float valorFechamento, String observaccao, char status, Funcionario funcionario) {
         this.id = id;
         this.dataHoraAbertura = dataHoraAbertura;
         this.dataHoraFechamento = dataHoraFechamento;
@@ -30,6 +31,7 @@ public class Caixa {
         this.valorFechamento = valorFechamento;
         this.observaccao = observaccao;
         this.status = status;
+        this.funcionario = funcionario;
     }
 
     public int getId() {
@@ -88,9 +90,26 @@ public class Caixa {
         this.status = status;
     }
 
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
+    }
+    
+    
+
     @Override
     public String toString() {
-        return this.getId() + ", " + this.getDataHoraAbertura() + ", " + this.getDataHoraFechamento() + ", " + this.getValorAbertura() + ", " + this.getValorFechamento() + ", " + this.getObservaccao() + ", " + this.getStatus();
+        return this.getId() + ", " 
+                + this.funcionario.getUsuario() + ", "
+                + this.getDataHoraAbertura() + ", "
+                + this.getDataHoraFechamento() + ", " 
+                + this.getValorAbertura() + ", " 
+                + this.getValorFechamento() + ", " 
+                + this.getObservaccao() + ", " 
+                + this.getStatus();
 
     }
 }
