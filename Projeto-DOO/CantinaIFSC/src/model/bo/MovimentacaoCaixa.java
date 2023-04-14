@@ -10,24 +10,28 @@ import java.time.format.DateTimeFormatter;
  *
  * @author gabri
  */
-public class MovimentoCaixa {
+public class MovimentacaoCaixa {
     private int id;
     private DateTimeFormatter dataHorarioMovimento;
     private float valorMovimento;
     private String observacao;
     private char flagTipoMovimento;
     private char status;
+    private Caixa caixa;
+    private MovimentacaoEstoque movimentacaoEstoque;
 
-    public MovimentoCaixa() {
+    public MovimentacaoCaixa() {
     }
 
-    public MovimentoCaixa(int id, DateTimeFormatter dataHorarioMovimento, float valorMovimento, String observacao, char flagTipoMovimento, char status) {
+    public MovimentacaoCaixa(int id, DateTimeFormatter dataHorarioMovimento, float valorMovimento, String observacao, char flagTipoMovimento, char status, Caixa caixa, MovimentacaoEstoque movimentacaoEstoque) {
         this.id = id;
         this.dataHorarioMovimento = dataHorarioMovimento;
         this.valorMovimento = valorMovimento;
         this.observacao = observacao;
         this.flagTipoMovimento = flagTipoMovimento;
         this.status = status;
+        this.caixa = caixa;
+        this.movimentacaoEstoque = movimentacaoEstoque;
     }
 
     public int getId() {
@@ -78,9 +82,30 @@ public class MovimentoCaixa {
         this.status = status;
     }
 
+    public Caixa getCaixa() {
+        return caixa;
+    }
+
+    public void setCaixa(Caixa caixa) {
+        this.caixa = caixa;
+    }
+
+    public MovimentacaoEstoque getMovimentacaoEstoque() {
+        return movimentacaoEstoque;
+    }
+
+    public void setMovimentacaoEstoque(MovimentacaoEstoque movimentacaoEstoque) {
+        this.movimentacaoEstoque = movimentacaoEstoque;
+    }
+
     @Override
     public String toString() {
-        return this.getId() + ", " + this.getDataHorarioMovimento() + ", " + this.getValorMovimento() + ", " + this.getObservacao() + ", " + this.getFlagTipoMovimento() + ", " + this.getStatus();
+        return this.getId() + ", " 
+                + this.getDataHorarioMovimento() + ", " 
+                + this.getValorMovimento() + ", " 
+                + this.getObservacao() + ", " 
+                + this.getFlagTipoMovimento() + ", " 
+                + this.getStatus();
 
     }
 }
