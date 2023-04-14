@@ -12,7 +12,7 @@ import java.util.Date;
  * @author gabri
  */
 public class Contas {
-     private int id;
+    private int id;
     private DateTimeFormatter dataHoraEmissao;
     private Date dataVencimento;
     private Date dataQuitação;
@@ -23,10 +23,14 @@ public class Contas {
     private float observacao;
     private char flagTipoConta;
     private char status;
+    private Compra compra;
+    private Venda venda;
+    
 
     public Contas() {
     }
-    public Contas(int id, DateTimeFormatter dataHoraEmissao, Date dataVencimento, Date dataQuitação, float valorEmitido, float valorDesconto, float valorAcrescimo, float valorQuitado, float observacao, char flagTipoConta, char status) {
+
+    public Contas(int id, DateTimeFormatter dataHoraEmissao, Date dataVencimento, Date dataQuitação, float valorEmitido, float valorDesconto, float valorAcrescimo, float valorQuitado, float observacao, char flagTipoConta, char status, Compra compra, Venda venda) {
         this.id = id;
         this.dataHoraEmissao = dataHoraEmissao;
         this.dataVencimento = dataVencimento;
@@ -38,6 +42,8 @@ public class Contas {
         this.observacao = observacao;
         this.flagTipoConta = flagTipoConta;
         this.status = status;
+        this.compra = compra;
+        this.venda = venda;
     }
 
     public int getId() {
@@ -128,9 +134,37 @@ public class Contas {
         this.status = status;
     }
 
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
+    }
+
+    public Venda getVenda() {
+        return venda;
+    }
+
+    public void setVenda(Venda venda) {
+        this.venda = venda;
+    }
+    
+    
+
     @Override
     public String toString() {
-        return this.getId() + ", " + this.getDataHoraEmissao() + ", " + this.getDataVencimento() + ", " + this.getDataQuitação() + ", " + this.getValorEmitido() + ", " + this.getValorDesconto() + ", " + this.getValorAcrescimo() + ", " + this.getValorQuitado() + ", " + this.getObservacao() + ", " + this.getFlagTipoConta() + ", " + this.getStatus();
+        return this.getId() + ", " 
+                + this.getDataHoraEmissao() + ", "
+                + this.getDataVencimento() + ", " 
+                + this.getDataQuitação() + ", "
+                + this.getValorEmitido() + ", " 
+                + this.getValorDesconto() + ", "
+                + this.getValorAcrescimo() + ", " 
+                + this.getValorQuitado() + ", "
+                + this.getObservacao() + ", " 
+                + this.getFlagTipoConta() + ", " 
+                + this.getStatus();
 
     }
 }
