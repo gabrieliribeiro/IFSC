@@ -8,12 +8,12 @@ package view;
  *
  * @author gabri
  */
-public class TestejFrame extends javax.swing.JFrame {
+public class TelaLogin extends javax.swing.JFrame {
 
     /**
-     * Creates new form TestejFrame
+     * Creates new form TelaLogin
      */
-    public TestejFrame() {
+    public TelaLogin() {
         initComponents();
     }
 
@@ -26,40 +26,38 @@ public class TestejFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanelTeste = new javax.swing.JPanel();
+        jPBg = new javax.swing.JPanel();
+        jLTitulo = new javax.swing.JLabel();
+        jLIconeTelaLogin = new javax.swing.JLabel();
+        jLBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Fomulário de Teste da GABISZOKA");
-        setAlwaysOnTop(true);
+        setResizable(false);
 
-        jPanelTeste.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPBg.setLayout(null);
 
-        javax.swing.GroupLayout jPanelTesteLayout = new javax.swing.GroupLayout(jPanelTeste);
-        jPanelTeste.setLayout(jPanelTesteLayout);
-        jPanelTesteLayout.setHorizontalGroup(
-            jPanelTesteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 356, Short.MAX_VALUE)
-        );
-        jPanelTesteLayout.setVerticalGroup(
-            jPanelTesteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 243, Short.MAX_VALUE)
-        );
+        jLTitulo.setText("jLabel1");
+        jPBg.add(jLTitulo);
+        jLTitulo.setBounds(300, 100, 37, 16);
+
+        jLIconeTelaLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/icone-login.png"))); // NOI18N
+        jLIconeTelaLogin.setToolTipText("");
+        jPBg.add(jLIconeTelaLogin);
+        jLIconeTelaLogin.setBounds(660, 270, 598, 417);
+
+        jLBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/bg.png"))); // NOI18N
+        jPBg.add(jLBackground);
+        jLBackground.setBounds(0, 0, 1280, 800);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanelTeste, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+            .addComponent(jPBg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanelTeste, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+            .addComponent(jPBg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -82,25 +80,28 @@ public class TestejFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TestejFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TestejFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TestejFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TestejFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TestejFrame().setVisible(true);
+                new TelaLogin().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanelTeste;
+    private javax.swing.JLabel jLBackground;
+    private javax.swing.JLabel jLIconeTelaLogin;
+    private javax.swing.JLabel jLTitulo;
+    private javax.swing.JPanel jPBg;
     // End of variables declaration//GEN-END:variables
 }
