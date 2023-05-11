@@ -28,17 +28,80 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jPBg = new javax.swing.JPanel();
         jLTitulo = new javax.swing.JLabel();
+        jLIntroducao = new javax.swing.JLabel();
+        jLInstrucao = new javax.swing.JLabel();
+        jLUser = new javax.swing.JLabel();
+        jTPUsuario = new javax.swing.JTextPane();
+        jLSenha = new javax.swing.JLabel();
+        jPFSenha = new javax.swing.JPasswordField();
+        jBEntrar = new javax.swing.JButton();
         jLIconeTelaLogin = new javax.swing.JLabel();
         jLBackground = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1280, 832));
         setResizable(false);
 
         jPBg.setLayout(null);
 
-        jLTitulo.setText("jLabel1");
+        jLTitulo.setFont(new java.awt.Font("Arial Black", 1, 48)); // NOI18N
+        jLTitulo.setForeground(new java.awt.Color(242, 241, 243));
+        jLTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLTitulo.setText("Cantina IFSC");
         jPBg.add(jLTitulo);
-        jLTitulo.setBounds(300, 100, 37, 16);
+        jLTitulo.setBounds(140, 130, 370, 70);
+
+        jLIntroducao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        jLIntroducao.setForeground(new java.awt.Color(242, 241, 243));
+        jLIntroducao.setText("Seja bem-vindo!!");
+        jPBg.add(jLIntroducao);
+        jLIntroducao.setBounds(240, 220, 164, 30);
+
+        jLInstrucao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 20)); // NOI18N
+        jLInstrucao.setForeground(new java.awt.Color(242, 241, 243));
+        jLInstrucao.setText("Utilize seu usuário e senha para entrar no sistema.");
+        jPBg.add(jLInstrucao);
+        jLInstrucao.setBounds(80, 260, 500, 24);
+
+        jLUser.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        jLUser.setForeground(new java.awt.Color(242, 241, 243));
+        jLUser.setText("Usuário");
+        jPBg.add(jLUser);
+        jLUser.setBounds(130, 340, 80, 24);
+
+        jTPUsuario.setBackground(new java.awt.Color(200, 241, 197));
+        jTPUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(229, 229, 229), 0, true));
+        jTPUsuario.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        jTPUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        jTPUsuario.setMaximumSize(new java.awt.Dimension(380, 50));
+        jTPUsuario.setMinimumSize(new java.awt.Dimension(380, 50));
+        jTPUsuario.setPreferredSize(new java.awt.Dimension(380, 50));
+        jPBg.add(jTPUsuario);
+        jTPUsuario.setBounds(130, 370, 380, 50);
+
+        jLSenha.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        jLSenha.setForeground(new java.awt.Color(242, 241, 243));
+        jLSenha.setText("Senha");
+        jPBg.add(jLSenha);
+        jLSenha.setBounds(130, 430, 80, 24);
+
+        jPFSenha.setBackground(new java.awt.Color(200, 241, 197));
+        jPFSenha.setForeground(java.awt.Color.gray);
+        jPBg.add(jPFSenha);
+        jPFSenha.setBounds(130, 460, 380, 50);
+
+        jBEntrar.setBackground(new java.awt.Color(109, 217, 108));
+        jBEntrar.setFont(new java.awt.Font("Arial Black", 1, 20)); // NOI18N
+        jBEntrar.setForeground(new java.awt.Color(30, 30, 30));
+        jBEntrar.setText("Entrar");
+        jBEntrar.setBorderPainted(false);
+        jBEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBEntrarActionPerformed(evt);
+            }
+        });
+        jPBg.add(jBEntrar);
+        jBEntrar.setBounds(250, 550, 150, 60);
 
         jLIconeTelaLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/imagens/icone-login.png"))); // NOI18N
         jLIconeTelaLogin.setToolTipText("");
@@ -53,15 +116,19 @@ public class TelaLogin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPBg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPBg, javax.swing.GroupLayout.DEFAULT_SIZE, 1279, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPBg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPBg, javax.swing.GroupLayout.DEFAULT_SIZE, 802, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEntrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBEntrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,9 +166,16 @@ public class TelaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBEntrar;
     private javax.swing.JLabel jLBackground;
     private javax.swing.JLabel jLIconeTelaLogin;
+    private javax.swing.JLabel jLInstrucao;
+    private javax.swing.JLabel jLIntroducao;
+    private javax.swing.JLabel jLSenha;
     private javax.swing.JLabel jLTitulo;
+    private javax.swing.JLabel jLUser;
     private javax.swing.JPanel jPBg;
+    private javax.swing.JPasswordField jPFSenha;
+    private javax.swing.JTextPane jTPUsuario;
     // End of variables declaration//GEN-END:variables
 }
