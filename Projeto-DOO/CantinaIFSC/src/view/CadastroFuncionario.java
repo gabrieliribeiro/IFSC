@@ -92,7 +92,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         jLTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
         jLTitulo.setForeground(new java.awt.Color(242, 241, 243));
         jLTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTitulo.setText("Funcionário");
+        jLTitulo.setText("Cadastro Funcionário");
         jLTitulo.setToolTipText("");
         jLTitulo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
@@ -113,8 +113,8 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             .addGroup(toppaneLayout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addComponent(jBExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(410, 410, 410)
-                .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(364, 364, 364)
+                .addComponent(jLTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         toppaneLayout.setVerticalGroup(
@@ -510,10 +510,11 @@ public class CadastroFuncionario extends javax.swing.JFrame {
                         .addComponent(jFTFCPF, javax.swing.GroupLayout.Alignment.TRAILING))
                     .addComponent(jFTFFone2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLEmail)
-                    .addComponent(jLUsuario)
-                    .addComponent(jLSenha))
+                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLSenha)
+                    .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLEmail)
+                        .addComponent(jLUsuario)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(midpaneLayout.createSequentialGroup()

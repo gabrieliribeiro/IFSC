@@ -88,7 +88,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
         jLTitulo.setForeground(new java.awt.Color(242, 241, 243));
         jLTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTitulo.setText("Cliente");
+        jLTitulo.setText("Cadastro Cliente");
         jLTitulo.setToolTipText("");
         jLTitulo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
@@ -109,8 +109,8 @@ public class CadastroCliente extends javax.swing.JFrame {
             .addGroup(toppaneLayout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addComponent(jBExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(410, 410, 410)
-                .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(389, 389, 389)
+                .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         toppaneLayout.setVerticalGroup(

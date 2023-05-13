@@ -8,12 +8,12 @@ package view;
  *
  * @author gabri
  */
-public class TelaCadastroEnderecos extends javax.swing.JFrame {
+public class CadastroBairro extends javax.swing.JFrame {
 
     /**
-     * Creates new form TelaCadastroEnderecos
+     * Creates new form Bairro
      */
-    public TelaCadastroEnderecos() {
+    public CadastroBairro() {
         initComponents();
     }
 
@@ -27,87 +27,87 @@ public class TelaCadastroEnderecos extends javax.swing.JFrame {
     private void initComponents() {
 
         jBG = new javax.swing.JPanel();
-        toppane4 = new javax.swing.JPanel();
-        jLTitulo4 = new javax.swing.JLabel();
-        jBExit4 = new javax.swing.JButton();
+        toppane = new javax.swing.JPanel();
+        jLTitulo = new javax.swing.JLabel();
+        JButtonExit = new javax.swing.JButton();
         midpane = new javax.swing.JPanel();
         jLId = new javax.swing.JLabel();
-        jTPId = new javax.swing.JTextPane();
+        jTFId = new javax.swing.JTextField();
         jButtonBuscar = new javax.swing.JButton();
         jLDescricao = new javax.swing.JLabel();
-        jTPDescricao = new javax.swing.JTextPane();
+        jTFDescricao = new javax.swing.JTextField();
         bottompane = new javax.swing.JPanel();
         jButtonNew = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
         jButtonCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(1280, 832));
 
         jBG.setBackground(new java.awt.Color(255, 255, 255));
         jBG.setMaximumSize(new java.awt.Dimension(1030, 740));
-        jBG.setPreferredSize(new java.awt.Dimension(1030, 740));
+        jBG.setMinimumSize(new java.awt.Dimension(1030, 740));
 
-        toppane4.setBackground(new java.awt.Color(109, 217, 108));
-        toppane4.setPreferredSize(new java.awt.Dimension(1280, 99));
+        toppane.setBackground(new java.awt.Color(109, 217, 108));
+        toppane.setPreferredSize(new java.awt.Dimension(1030, 99));
 
-        jLTitulo4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
-        jLTitulo4.setForeground(new java.awt.Color(242, 241, 243));
-        jLTitulo4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTitulo4.setText(".....");
-        jLTitulo4.setToolTipText("");
-        jLTitulo4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
+        jLTitulo.setForeground(new java.awt.Color(242, 241, 243));
+        jLTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLTitulo.setText("Cadastro Bairro");
+        jLTitulo.setToolTipText("");
+        jLTitulo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        jBExit4.setBackground(new java.awt.Color(109, 217, 108));
-        jBExit4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-voltar-48.png"))); // NOI18N
-        jBExit4.setBorderPainted(false);
-        jBExit4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jBExit4.addActionListener(new java.awt.event.ActionListener() {
+        JButtonExit.setBackground(new java.awt.Color(109, 217, 108));
+        JButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-voltar-48.png"))); // NOI18N
+        JButtonExit.setActionCommand("0");
+        JButtonExit.setBorderPainted(false);
+        JButtonExit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        JButtonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBExitActionPerformed(evt);
+                JButtonExitActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout toppane4Layout = new javax.swing.GroupLayout(toppane4);
-        toppane4.setLayout(toppane4Layout);
-        toppane4Layout.setHorizontalGroup(
-            toppane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(toppane4Layout.createSequentialGroup()
+        javax.swing.GroupLayout toppaneLayout = new javax.swing.GroupLayout(toppane);
+        toppane.setLayout(toppaneLayout);
+        toppaneLayout.setHorizontalGroup(
+            toppaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(toppaneLayout.createSequentialGroup()
                 .addGap(72, 72, 72)
-                .addComponent(jBExit4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(229, 229, 229)
-                .addComponent(jLTitulo4)
-                .addContainerGap(634, Short.MAX_VALUE))
+                .addComponent(JButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(254, 254, 254)
+                .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        toppane4Layout.setVerticalGroup(
-            toppane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(toppane4Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(toppane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLTitulo4)
-                    .addComponent(jBExit4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+        toppaneLayout.setVerticalGroup(
+            toppaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(toppaneLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(toppaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLTitulo)
+                    .addComponent(JButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         midpane.setBackground(new java.awt.Color(255, 255, 255));
-        midpane.setPreferredSize(new java.awt.Dimension(1280, 152));
+        midpane.setPreferredSize(new java.awt.Dimension(1030, 152));
 
         jLId.setBackground(new java.awt.Color(30, 30, 30));
         jLId.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jLId.setForeground(java.awt.Color.gray);
         jLId.setText("ID");
 
-        jTPId.setBackground(new java.awt.Color(229, 229, 229));
-        jTPId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(229, 229, 229), 10, true));
-        jTPId.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
-        jTPId.setForeground(new java.awt.Color(0, 0, 0));
+        jTFId.setBackground(new java.awt.Color(229, 229, 229));
+        jTFId.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        jTFId.setForeground(java.awt.Color.gray);
+        jTFId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jButtonBuscar.setBackground(new java.awt.Color(229, 229, 229));
         jButtonBuscar.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
+        jButtonBuscar.setActionCommand("0");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -121,12 +121,55 @@ public class TelaCadastroEnderecos extends javax.swing.JFrame {
         jLDescricao.setBackground(new java.awt.Color(30, 30, 30));
         jLDescricao.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jLDescricao.setForeground(java.awt.Color.gray);
-        jLDescricao.setText("Nome");
+        jLDescricao.setText("Descrição");
 
-        jTPDescricao.setBackground(new java.awt.Color(229, 229, 229));
-        jTPDescricao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(229, 229, 229), 10, true));
-        jTPDescricao.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
-        jTPDescricao.setForeground(new java.awt.Color(0, 0, 0));
+        jTFDescricao.setBackground(new java.awt.Color(229, 229, 229));
+        jTFDescricao.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        jTFDescricao.setForeground(java.awt.Color.gray);
+        jTFDescricao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
+        jTFDescricao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFDescricaoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout midpaneLayout = new javax.swing.GroupLayout(midpane);
+        midpane.setLayout(midpaneLayout);
+        midpaneLayout.setHorizontalGroup(
+            midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(midpaneLayout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLDescricao)
+                        .addComponent(jLId)
+                        .addComponent(jTFDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(midpaneLayout.createSequentialGroup()
+                        .addComponent(jTFId, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(320, 320, 320)))
+                .addContainerGap(117, Short.MAX_VALUE))
+        );
+        midpaneLayout.setVerticalGroup(
+            midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(jLId)
+                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(midpaneLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(jTFId, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(jLDescricao)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTFDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(171, 171, 171))
+        );
 
         bottompane.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -135,6 +178,7 @@ public class TelaCadastroEnderecos extends javax.swing.JFrame {
         jButtonNew.setForeground(new java.awt.Color(255, 255, 255));
         jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-adicionar-usuário-masculino-30.png"))); // NOI18N
         jButtonNew.setText("Novo");
+        jButtonNew.setActionCommand("0");
         jButtonNew.setBorderPainted(false);
         jButtonNew.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonNew.setIconTextGap(40);
@@ -150,6 +194,7 @@ public class TelaCadastroEnderecos extends javax.swing.JFrame {
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
         jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-verificar-arquivo-24.png"))); // NOI18N
         jButtonSave.setText("Salvar");
+        jButtonSave.setActionCommand("1");
         jButtonSave.setBorderPainted(false);
         jButtonSave.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonSave.setIconTextGap(40);
@@ -165,6 +210,7 @@ public class TelaCadastroEnderecos extends javax.swing.JFrame {
         jButtonCancel.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-cancelar-30.png"))); // NOI18N
         jButtonCancel.setText("Cancelar");
+        jButtonCancel.setActionCommand("1");
         jButtonCancel.setBorderPainted(false);
         jButtonCancel.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonCancel.setIconTextGap(20);
@@ -180,76 +226,45 @@ public class TelaCadastroEnderecos extends javax.swing.JFrame {
         bottompaneLayout.setHorizontalGroup(
             bottompaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bottompaneLayout.createSequentialGroup()
-                .addGap(173, 173, 173)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonNew, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addGap(46, 46, 46)
                 .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
+                .addGap(46, 46, 46)
                 .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addGap(182, 182, 182))
         );
         bottompaneLayout.setVerticalGroup(
             bottompaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bottompaneLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addGap(24, 24, 24)
                 .addGroup(bottompaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonNew, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29))
-        );
-
-        javax.swing.GroupLayout midpaneLayout = new javax.swing.GroupLayout(midpane);
-        midpane.setLayout(midpaneLayout);
-        midpaneLayout.setHorizontalGroup(
-            midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(midpaneLayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLId)
-                    .addComponent(jLDescricao)
-                    .addGroup(midpaneLayout.createSequentialGroup()
-                        .addComponent(jTPId, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTPDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 879, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
-                .addComponent(bottompane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        midpaneLayout.setVerticalGroup(
-            midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(jLId)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTPId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(jLDescricao)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTPDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(157, 157, 157)
-                .addComponent(bottompane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout jBGLayout = new javax.swing.GroupLayout(jBG);
         jBG.setLayout(jBGLayout);
         jBGLayout.setHorizontalGroup(
             jBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(toppane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE)
-            .addComponent(midpane, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE)
+            .addComponent(toppane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jBGLayout.createSequentialGroup()
+                .addGroup(jBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(bottompane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(midpane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jBGLayout.setVerticalGroup(
             jBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jBGLayout.createSequentialGroup()
-                .addComponent(toppane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(midpane, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addComponent(toppane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(midpane, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(bottompane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -266,25 +281,29 @@ public class TelaCadastroEnderecos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
+    private void JButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonExitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonCancelActionPerformed
-
-    private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonSaveActionPerformed
-
-    private void jButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonNewActionPerformed
+    }//GEN-LAST:event_JButtonExitActionPerformed
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonBuscarActionPerformed
 
-    private void jBExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExitActionPerformed
+    private void jTFDescricaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFDescricaoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jBExitActionPerformed
+    }//GEN-LAST:event_jTFDescricaoActionPerformed
+
+    private void jButtonNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonNewActionPerformed
+
+    private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSaveActionPerformed
+
+    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonCancelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -303,27 +322,28 @@ public class TelaCadastroEnderecos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroEnderecos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroBairro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroEnderecos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroBairro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroEnderecos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroBairro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroEnderecos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CadastroBairro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCadastroEnderecos().setVisible(true);
+                new CadastroBairro().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JButtonExit;
     private javax.swing.JPanel bottompane;
-    private javax.swing.JButton jBExit4;
     private javax.swing.JPanel jBG;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonCancel;
@@ -331,10 +351,10 @@ public class TelaCadastroEnderecos extends javax.swing.JFrame {
     private javax.swing.JButton jButtonSave;
     private javax.swing.JLabel jLDescricao;
     private javax.swing.JLabel jLId;
-    private javax.swing.JLabel jLTitulo4;
-    private javax.swing.JTextPane jTPDescricao;
-    private javax.swing.JTextPane jTPId;
+    private javax.swing.JLabel jLTitulo;
+    private javax.swing.JTextField jTFDescricao;
+    private javax.swing.JTextField jTFId;
     private javax.swing.JPanel midpane;
-    private javax.swing.JPanel toppane4;
+    private javax.swing.JPanel toppane;
     // End of variables declaration//GEN-END:variables
 }
