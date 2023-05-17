@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package utilities;
 
 import java.awt.Component;
@@ -14,10 +10,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-/**
- *
- * @author aluno
- */
+
 public class Utilities {
 
     public static void ativa(boolean ativa, JPanel painel) {

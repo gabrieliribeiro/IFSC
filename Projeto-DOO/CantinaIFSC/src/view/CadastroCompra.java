@@ -4,6 +4,12 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author gabri
@@ -17,6 +23,119 @@ public class CadastroCompra extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JPanel getBottompane() {
+        return bottompane;
+    }
+
+    public JButton getjBExit4() {
+        return jBExit4;
+    }
+
+    public JButton getjButtonAddCnpj() {
+        return jButtonAddCnpj;
+    }
+
+    public JButton getjButtonBuscar() {
+        return jButtonBuscar;
+    }
+
+    public JButton getjButtonBuscarCnpj() {
+        return jButtonBuscarCnpj;
+    }
+
+    public JButton getjButtonCancel() {
+        return jButtonCancel;
+    }
+
+    public JButton getjButtonNew() {
+        return jButtonNew;
+    }
+
+    public JButton getjButtonSave() {
+        return jButtonSave;
+    }
+
+    public JPanel getMidpane() {
+        return midpane;
+    }
+
+    public JPanel getToppane4() {
+        return toppane4;
+    }
+
+    public JComboBox<String> getjCBStatus() {
+        return jCBStatus;
+    }
+
+    public void setjCBStatus(JComboBox<String> jCBStatus) {
+        this.jCBStatus = jCBStatus;
+    }
+
+    public JComboBox<String> getjCBTipoDesconto() {
+        return jCBTipoDesconto;
+    }
+
+    public void setjCBTipoDesconto(JComboBox<String> jCBTipoDesconto) {
+        this.jCBTipoDesconto = jCBTipoDesconto;
+    }
+
+    public JFormattedTextField getjFTFCnpj() {
+        return jFTFCnpj;
+    }
+
+    public void setjFTFCnpj(JFormattedTextField jFTFCnpj) {
+        this.jFTFCnpj = jFTFCnpj;
+    }
+
+    public JFormattedTextField getjFTFDataEmissao() {
+        return jFTFDataEmissao;
+    }
+
+    public void setjFTFDataEmissao(JFormattedTextField jFTFDataEmissao) {
+        this.jFTFDataEmissao = jFTFDataEmissao;
+    }
+
+    public JTextField getjTFFornecedor() {
+        return jTFFornecedor;
+    }
+
+    public void setjTFFornecedor(JTextField jTFFornecedor) {
+        this.jTFFornecedor = jTFFornecedor;
+    }
+
+    public JTextField getjTFID() {
+        return jTFID;
+    }
+
+    public void setjTFID(JTextField jTFID) {
+        this.jTFID = jTFID;
+    }
+
+    public JTextField getjTFNF() {
+        return jTFNF;
+    }
+
+    public void setjTFNF(JTextField jTFNF) {
+        this.jTFNF = jTFNF;
+    }
+
+    public JTextField getjTFObservacao() {
+        return jTFObservacao;
+    }
+
+    public void setjTFObservacao(JTextField jTFObservacao) {
+        this.jTFObservacao = jTFObservacao;
+    }
+
+    public JTextField getjTFValorDesconto() {
+        return jTFValorDesconto;
+    }
+
+    public void setjTFValorDesconto(JTextField jTFValorDesconto) {
+        this.jTFValorDesconto = jTFValorDesconto;
+    }
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -130,6 +249,7 @@ public class CadastroCompra extends javax.swing.JFrame {
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
+        jButtonBuscar.setActionCommand("1");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -188,6 +308,7 @@ public class CadastroCompra extends javax.swing.JFrame {
         jButtonBuscarCnpj.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jButtonBuscarCnpj.setForeground(java.awt.Color.gray);
         jButtonBuscarCnpj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
+        jButtonBuscarCnpj.setActionCommand("1");
         jButtonBuscarCnpj.setBorderPainted(false);
         jButtonBuscarCnpj.setHideActionText(true);
         jButtonBuscarCnpj.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -200,6 +321,7 @@ public class CadastroCompra extends javax.swing.JFrame {
 
         jButtonAddCnpj.setBackground(new java.awt.Color(229, 229, 229));
         jButtonAddCnpj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-soma-30.png"))); // NOI18N
+        jButtonAddCnpj.setActionCommand("1");
         jButtonAddCnpj.setBorderPainted(false);
         jButtonAddCnpj.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonAddCnpj.setIconTextGap(0);
@@ -360,8 +482,7 @@ public class CadastroCompra extends javax.swing.JFrame {
                     .addGroup(midpaneLayout.createSequentialGroup()
                         .addComponent(jLStatus)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCBStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)))
+                        .addComponent(jCBStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTFObservacao, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(8, 8, 8))
@@ -376,6 +497,7 @@ public class CadastroCompra extends javax.swing.JFrame {
         jButtonNew.setForeground(new java.awt.Color(255, 255, 255));
         jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-adicionar-usuário-masculino-30.png"))); // NOI18N
         jButtonNew.setText("Novo");
+        jButtonNew.setActionCommand("0");
         jButtonNew.setBorderPainted(false);
         jButtonNew.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonNew.setIconTextGap(40);
@@ -391,6 +513,7 @@ public class CadastroCompra extends javax.swing.JFrame {
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
         jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-verificar-arquivo-24.png"))); // NOI18N
         jButtonSave.setText("Salvar");
+        jButtonSave.setActionCommand("1");
         jButtonSave.setBorderPainted(false);
         jButtonSave.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonSave.setIconTextGap(40);
@@ -406,6 +529,7 @@ public class CadastroCompra extends javax.swing.JFrame {
         jButtonCancel.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-cancelar-30.png"))); // NOI18N
         jButtonCancel.setText("Cancelar");
+        jButtonCancel.setActionCommand("1");
         jButtonCancel.setBorderPainted(false);
         jButtonCancel.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonCancel.setIconTextGap(20);

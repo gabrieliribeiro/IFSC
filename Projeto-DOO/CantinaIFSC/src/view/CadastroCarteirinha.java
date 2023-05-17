@@ -4,6 +4,11 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author gabri
@@ -16,6 +21,90 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
     public CadastroCarteirinha() {
         initComponents();
     }
+
+    public JButton getJButtonExit() {
+        return JButtonExit;
+    }
+
+    public JButton getjButtonCancel() {
+        return jButtonCancel;
+    }
+
+    public JButton getjButtonNew() {
+        return jButtonNew;
+    }
+
+    public JButton getjButtonSave() {
+        return jButtonSave;
+    }
+
+    public JButton getjButtonBuscar() {
+        return jButtonBuscar;
+    }
+    
+
+    
+    public JButton getjButtonAdicionarCPF() {
+        return jButtonAddCPF;
+    }
+
+    public JButton getjButtonPesquisarCPF() {
+        return jButtonBuscarCPF;
+    }
+
+
+    public JFormattedTextField getjFormattedTextFieldCPF() {
+        return jFTFCPF;
+    }
+
+    public void setjFormattedTextFieldCPF(JFormattedTextField jFormattedTextFieldCPF) {
+        this.jFTFCPF = jFormattedTextFieldCPF;
+    }
+
+    public JFormattedTextField getjFormattedTextFieldDataCancelamento() {
+        return jFTFDataCancelamento;
+    }
+
+    public void setjFormattedTextFieldDataCancelamento(JFormattedTextField jFormattedTextFieldDataCancelamento) {
+        this.jFTFDataCancelamento = jFormattedTextFieldDataCancelamento;
+    }
+
+    public JFormattedTextField getjFormattedTextFieldDataGeracao() {
+        return jFTFDataGeracao;
+    }
+
+    public void setjFormattedTextFieldDataGeracao(JFormattedTextField jFormattedTextFieldDataGeracao) {
+        this.jFTFDataGeracao = jFormattedTextFieldDataGeracao;
+    }
+
+    public JTextField getjTextFieldCodBarra() {
+        return jTFCodBarra;
+    }
+
+    public void setjTextFieldCodBarra(JTextField jTextFieldCodBarra) {
+        this.jTFCodBarra = jTextFieldCodBarra;
+    }
+
+    public JTextField getjTextFieldID() {
+        return jTFID;
+    }
+
+    public void setjTextFieldID(JTextField jTextFieldID) {
+        this.jTFID = jTextFieldID;
+    }
+
+    public JPanel getBottompane() {
+        return bottompane;
+    }
+
+    public JPanel getMidpane() {
+        return midpane;
+    }
+
+    public JPanel getToppane() {
+        return toppane;
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -115,6 +204,7 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
+        jButtonBuscar.setActionCommand("1");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);

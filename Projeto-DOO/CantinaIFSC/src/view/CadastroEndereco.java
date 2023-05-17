@@ -4,6 +4,13 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author gabri
@@ -16,6 +23,87 @@ public class CadastroEndereco extends javax.swing.JFrame {
     public CadastroEndereco() {
         initComponents();
     }
+
+    public JPanel getBottompane() {
+        return bottompane;
+    }
+
+    public JButton getjBExit4() {
+        return jBExit4;
+    }
+
+    public JButton getjButtonBuscar() {
+        return jButtonBuscar;
+    }
+
+    public JButton getjButtonCancel() {
+        return jButtonCancel;
+    }
+
+    public JButton getjButtonNew() {
+        return jButtonNew;
+    }
+
+    public JButton getjButtonSave() {
+        return jButtonSave;
+    }
+
+    public JPanel getMidpane() {
+        return midpane;
+    }
+
+    public JPanel getToppane4() {
+        return toppane4;
+    }
+
+    public JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public void setjComboBox1(JComboBox<String> jComboBox1) {
+        this.jComboBox1 = jComboBox1;
+    }
+
+    public JTextField getjTFBairro() {
+        return jTFBairro;
+    }
+
+    public void setjTFBairro(JTextField jTFBairro) {
+        this.jTFBairro = jTFBairro;
+    }
+
+    public JTextField getjTFCEP() {
+        return jTFCEP;
+    }
+
+    public void setjTFCEP(JTextField jTFCEP) {
+        this.jTFCEP = jTFCEP;
+    }
+
+    public JTextField getjTFCidade() {
+        return jTFCidade;
+    }
+
+    public void setjTFCidade(JTextField jTFCidade) {
+        this.jTFCidade = jTFCidade;
+    }
+
+    public JTextField getjTFID() {
+        return jTFID;
+    }
+
+    public void setjTFID(JTextField jTFID) {
+        this.jTFID = jTFID;
+    }
+
+    public JTextField getjTFLogradouro() {
+        return jTFLogradouro;
+    }
+
+    public void setjTFLogradouro(JTextField jTFLogradouro) {
+        this.jTFLogradouro = jTFLogradouro;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -43,6 +131,7 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jLBairro = new javax.swing.JLabel();
         jTFBairro = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jLIStatus = new javax.swing.JLabel();
         bottompane = new javax.swing.JPanel();
         jButtonNew = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
@@ -119,6 +208,7 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
+        jButtonBuscar.setActionCommand("1");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -178,6 +268,11 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jComboBox1.setSelectedIndex(-1);
         jComboBox1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
+        jLIStatus.setBackground(new java.awt.Color(30, 30, 30));
+        jLIStatus.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        jLIStatus.setForeground(java.awt.Color.gray);
+        jLIStatus.setText("Status");
+
         javax.swing.GroupLayout midpaneLayout = new javax.swing.GroupLayout(midpane);
         midpane.setLayout(midpaneLayout);
         midpaneLayout.setHorizontalGroup(
@@ -197,21 +292,25 @@ public class CadastroEndereco extends javax.swing.JFrame {
                             .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(43, 43, 43)
                         .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(midpaneLayout.createSequentialGroup()
-                                .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jTFCidade)
                             .addComponent(jLCidade)
                             .addComponent(jLBairro)
-                            .addComponent(jTFBairro))
+                            .addComponent(jTFBairro)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
+                                .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLIStatus)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(113, 113, 113))))
         );
         midpaneLayout.setVerticalGroup(
             midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
                 .addContainerGap(65, Short.MAX_VALUE)
-                .addComponent(jLId)
+                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLId)
+                    .addComponent(jLIStatus))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -243,6 +342,7 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jButtonNew.setForeground(new java.awt.Color(255, 255, 255));
         jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-adicionar-usuário-masculino-30.png"))); // NOI18N
         jButtonNew.setText("Novo");
+        jButtonNew.setActionCommand("0");
         jButtonNew.setBorderPainted(false);
         jButtonNew.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonNew.setIconTextGap(40);
@@ -258,6 +358,7 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
         jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-verificar-arquivo-24.png"))); // NOI18N
         jButtonSave.setText("Salvar");
+        jButtonSave.setActionCommand("1");
         jButtonSave.setBorderPainted(false);
         jButtonSave.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonSave.setIconTextGap(40);
@@ -273,6 +374,7 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jButtonCancel.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-cancelar-30.png"))); // NOI18N
         jButtonCancel.setText("Cancelar");
+        jButtonCancel.setActionCommand("1");
         jButtonCancel.setBorderPainted(false);
         jButtonCancel.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonCancel.setIconTextGap(20);
@@ -420,6 +522,7 @@ public class CadastroEndereco extends javax.swing.JFrame {
     private javax.swing.JLabel jLBairro;
     private javax.swing.JLabel jLCEP;
     private javax.swing.JLabel jLCidade;
+    private javax.swing.JLabel jLIStatus;
     private javax.swing.JLabel jLId;
     private javax.swing.JLabel jLLogradouro;
     private javax.swing.JLabel jLTitulo4;

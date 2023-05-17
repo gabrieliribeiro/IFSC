@@ -4,6 +4,13 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author gabri
@@ -16,6 +23,75 @@ public class CadastroFornecedor extends javax.swing.JFrame {
     public CadastroFornecedor() {
         initComponents();
     }
+
+    public JPanel getBottompane() {
+        return bottompane;
+    }
+
+    public JButton getjBExit() {
+        return jBExit;
+    }
+
+    public JButton getjButtonAddCEP() {
+        return jButtonAddCEP;
+    }
+
+    public JButton getjButtonBuscar() {
+        return jButtonBuscar;
+    }
+
+    public JButton getjButtonBuscarcep() {
+        return jButtonBuscarcep;
+    }
+
+    public JButton getjButtonCancel() {
+        return jButtonCancel;
+    }
+
+    public JButton getjButtonExclui() {
+        return jButtonExclui;
+    }
+
+    public JButton getjButtonNew() {
+        return jButtonNew;
+    }
+
+    public JButton getjButtonSave() {
+        return jButtonSave;
+    }
+
+    public JPanel getMidpane() {
+        return midpane;
+    }
+
+    public JPanel getToppane() {
+        return toppane;
+    }
+
+    public JComboBox<String> getjComboBStatus() {
+        return jComboBStatus;
+    }
+
+    public void setjComboBStatus(JComboBox<String> jComboBStatus) {
+        this.jComboBStatus = jComboBStatus;
+    }
+
+    public JFormattedTextField getjFTFFone1() {
+        return jFTFFone1;
+    }
+
+    public void setjFTFFone1(JFormattedTextField jFTFFone1) {
+        this.jFTFFone1 = jFTFFone1;
+    }
+
+    public JFormattedTextField getjFTFFone2() {
+        return jFTFFone2;
+    }
+
+    public void setjFTFFone2(JFormattedTextField jFTFFone2) {
+        this.jFTFFone2 = jFTFFone2;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -139,6 +215,7 @@ public class CadastroFornecedor extends javax.swing.JFrame {
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
+        jButtonBuscar.setActionCommand("1");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -258,6 +335,7 @@ public class CadastroFornecedor extends javax.swing.JFrame {
         jButtonBuscarcep.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jButtonBuscarcep.setForeground(java.awt.Color.gray);
         jButtonBuscarcep.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
+        jButtonBuscarcep.setActionCommand("1");
         jButtonBuscarcep.setBorderPainted(false);
         jButtonBuscarcep.setHideActionText(true);
         jButtonBuscarcep.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -270,6 +348,7 @@ public class CadastroFornecedor extends javax.swing.JFrame {
 
         jButtonAddCEP.setBackground(new java.awt.Color(229, 229, 229));
         jButtonAddCEP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-soma-30.png"))); // NOI18N
+        jButtonAddCEP.setActionCommand("1");
         jButtonAddCEP.setBorderPainted(false);
         jButtonAddCEP.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonAddCEP.setIconTextGap(0);
@@ -488,6 +567,7 @@ public class CadastroFornecedor extends javax.swing.JFrame {
         jButtonNew.setForeground(new java.awt.Color(255, 255, 255));
         jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-adicionar-usuário-masculino-30.png"))); // NOI18N
         jButtonNew.setText("Novo");
+        jButtonNew.setActionCommand("0");
         jButtonNew.setBorderPainted(false);
         jButtonNew.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonNew.setIconTextGap(40);
@@ -503,6 +583,7 @@ public class CadastroFornecedor extends javax.swing.JFrame {
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
         jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-verificar-arquivo-24.png"))); // NOI18N
         jButtonSave.setText("Salvar");
+        jButtonSave.setActionCommand("1");
         jButtonSave.setBorderPainted(false);
         jButtonSave.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonSave.setIconTextGap(40);
@@ -518,6 +599,7 @@ public class CadastroFornecedor extends javax.swing.JFrame {
         jButtonCancel.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-cancelar-30.png"))); // NOI18N
         jButtonCancel.setText("Cancelar");
+        jButtonCancel.setActionCommand("1");
         jButtonCancel.setBorderPainted(false);
         jButtonCancel.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonCancel.setIconTextGap(20);
@@ -533,6 +615,7 @@ public class CadastroFornecedor extends javax.swing.JFrame {
         jButtonExclui.setForeground(new java.awt.Color(255, 255, 255));
         jButtonExclui.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-apagar-para-sempre-30.png"))); // NOI18N
         jButtonExclui.setText("Excluir");
+        jButtonExclui.setActionCommand("0");
         jButtonExclui.setBorderPainted(false);
         jButtonExclui.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonExclui.setIconTextGap(30);
@@ -556,7 +639,7 @@ public class CadastroFornecedor extends javax.swing.JFrame {
                 .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
                 .addComponent(jButtonExclui, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
         );
         bottompaneLayout.setVerticalGroup(
             bottompaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

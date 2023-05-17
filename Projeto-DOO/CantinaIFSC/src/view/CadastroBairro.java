@@ -4,6 +4,11 @@
  */
 package view;
 
+import controller.ControllerCadastroBairro;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author gabri
@@ -15,7 +20,58 @@ public class CadastroBairro extends javax.swing.JFrame {
      */
     public CadastroBairro() {
         initComponents();
+        
     }
+    
+
+    public JButton getJButtonExit() {
+        return JButtonExit;
+    }
+
+    public JButton getjButtonBuscar() {
+        return jButtonBuscar;
+    }
+
+    public JButton getjButtonCancel() {
+        return jButtonCancel;
+    }
+
+    public JButton getjButtonNew() {
+        return jButtonNew;
+    }
+
+    public JButton getjButtonSave() {
+        return jButtonSave;
+    }
+
+    public JTextField getjTFDescricao() {
+        return jTFDescricao;
+    }
+
+    public void setjTFDescricao(JTextField jTFDescricao) {
+        this.jTFDescricao = jTFDescricao;
+    }
+
+    public JTextField getjTFId() {
+        return jTFId;
+    }
+
+    public void setjTFId(JTextField jTFId) {
+        this.jTFId = jTFId;
+    }
+    
+       public JPanel getToppane() {
+        return toppane;
+    }
+    
+    public JPanel getMidpane() {
+        return midpane;
+    }
+        
+     public JPanel getBottompane() {
+        return bottompane;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -176,7 +232,7 @@ public class CadastroBairro extends javax.swing.JFrame {
         jButtonNew.setBackground(new java.awt.Color(51, 204, 255));
         jButtonNew.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonNew.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-adicionar-usuário-masculino-30.png"))); // NOI18N
+        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-novo-por-cópia-30.png"))); // NOI18N
         jButtonNew.setText("Novo");
         jButtonNew.setActionCommand("0");
         jButtonNew.setBorderPainted(false);
@@ -192,7 +248,7 @@ public class CadastroBairro extends javax.swing.JFrame {
         jButtonSave.setBackground(new java.awt.Color(109, 217, 108));
         jButtonSave.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-verificar-arquivo-24.png"))); // NOI18N
+        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-salvar-30.png"))); // NOI18N
         jButtonSave.setText("Salvar");
         jButtonSave.setActionCommand("1");
         jButtonSave.setBorderPainted(false);

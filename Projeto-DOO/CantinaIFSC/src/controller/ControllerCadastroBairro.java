@@ -6,6 +6,7 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import view.BuscaBairro;
 import view.CadastroBairro;
 
 /**
@@ -35,7 +36,6 @@ public class ControllerCadastroBairro implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.cadastroBairro.getjButtonNew()) {
             utilities.Utilities.ativa(false, this.cadastroBairro.getBottompane());
-            utilities.Utilities.ativa(false, cadastroBairro.getToppane());
             utilities.Utilities.ativa(true, this.cadastroBairro.getMidpane());
             
         } else if (e.getSource() == this.cadastroBairro.getJButtonExit()) {
@@ -49,10 +49,10 @@ public class ControllerCadastroBairro implements ActionListener {
             utilities.Utilities.ativa(true, cadastroBairro.getMidpane());
             utilities.Utilities.limpaComponentes(false, cadastroBairro.getMidpane());
         } else if (e.getSource() == this.cadastroBairro.getjButtonBuscar()) {
-            //BuscaBairro buscaBairro = new BuscaBairro(null, true);
-            //ControllerBuscaBairro controllerBuscaBairro = new ControllerBuscaBairro(buscaBairro);
+            BuscaBairro buscaBairro = new BuscaBairro(null, true);
+            ControllerBuscaBairro controllerBuscaBairro = new ControllerBuscaBairro(buscaBairro);
             
-           //buscaBairro.setVisible(true);
+            buscaBairro.setVisible(true);
         }
     }
 

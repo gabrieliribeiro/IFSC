@@ -290,7 +290,6 @@
                               <Component id="jLStatus" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jCBStatus" min="-2" pref="44" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -348,6 +347,7 @@
                   <Image iconType="3" name="/view/icones/icons8-pesquisar-24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Buscar"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="hideActionText" type="boolean" value="true"/>
                 <Property name="horizontalTextPosition" type="int" value="2"/>
@@ -481,6 +481,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/view/icones/icons8-pesquisar-24.png"/>
                 </Property>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="hideActionText" type="boolean" value="true"/>
                 <Property name="horizontalTextPosition" type="int" value="2"/>
@@ -498,6 +499,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/view/icones/icons8-soma-30.png"/>
                 </Property>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
                 <Property name="iconTextGap" type="int" value="0"/>
@@ -749,6 +751,7 @@
                   <Image iconType="3" name="/view/icones/icons8-adicionar-usu&#xe1;rio-masculino-30.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
+                <Property name="actionCommand" type="java.lang.String" value="0"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="horizontalTextPosition" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="40"/>
@@ -775,6 +778,7 @@
                   <Image iconType="3" name="/view/icones/icons8-verificar-arquivo-24.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="horizontalTextPosition" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="40"/>
@@ -801,6 +805,7 @@
                   <Image iconType="3" name="/view/icones/icons8-cancelar-30.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cancelar"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="horizontalTextPosition" type="int" value="2"/>
                 <Property name="iconTextGap" type="int" value="20"/>

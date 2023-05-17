@@ -4,6 +4,11 @@
  */
 package view;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author gabri
@@ -15,6 +20,62 @@ public class CadastroCidade extends javax.swing.JFrame {
      */
     public CadastroCidade() {
         initComponents();
+    }
+
+    public JButton getJButtonExit() {
+        return JButtonExit;
+    }
+
+    public JPanel getBottompane() {
+        return bottompane;
+    }
+
+    public JButton getjButtonBuscar() {
+        return jButtonBuscar;
+    }
+
+    public JButton getjButtonCancel() {
+        return jButtonCancel;
+    }
+
+    public JButton getjButtonNew() {
+        return jButtonNew;
+    }
+
+    public JButton getjButtonSave() {
+        return jButtonSave;
+    }
+
+    public JComboBox<String> getjComboBoxUF() {
+        return jComboBoxUF;
+    }
+
+    public void setjComboBoxUF(JComboBox<String> jComboBoxUF) {
+        this.jComboBoxUF = jComboBoxUF;
+    }
+
+    public JPanel getMidpane() {
+        return midpane;
+    }
+
+    public JPanel getToppane() {
+        return toppane;
+    }
+
+    public JTextField getjTFDescricao() {
+        return jTFDescricao;
+    }
+
+    public void setjTFDescricao(JTextField jTFDescricao) {
+        this.jTFDescricao = jTFDescricao;
+    }
+
+    public JTextField getjTFId() {
+        return jTFId;
+    }
+
+    public void setjTFId(JTextField jTFId) {
+        this.jTFId = jTFId;
     }
 
     /**
@@ -109,7 +170,7 @@ public class CadastroCidade extends javax.swing.JFrame {
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
-        jButtonBuscar.setActionCommand("0");
+        jButtonBuscar.setActionCommand("1");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -144,6 +205,11 @@ public class CadastroCidade extends javax.swing.JFrame {
         jComboBoxUF.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         jComboBoxUF.setForeground(java.awt.Color.gray);
         jComboBoxUF.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
+        jComboBoxUF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxUFActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout midpaneLayout = new javax.swing.GroupLayout(midpane);
         midpane.setLayout(midpaneLayout);
@@ -330,6 +396,10 @@ public class CadastroCidade extends javax.swing.JFrame {
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonCancelActionPerformed
+
+    private void jComboBoxUFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxUFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxUFActionPerformed
 
     /**
      * @param args the command line arguments
