@@ -26,7 +26,9 @@ public class ControllerCadastroCliente implements ActionListener{
         
         
         utilities.Utilities.ativa(true, this.cadastroCliente.getBottompane());
-        utilities.Utilities.limpaComponentes(true, this.cadastroCliente.getMidpane());
+        utilities.Utilities.ativa(true, cadastroCliente.getToppane());
+        
+        
     }
 
     @Override
@@ -47,14 +49,14 @@ public class ControllerCadastroCliente implements ActionListener{
             utilities.Utilities.limpaComponentes(false, cadastroCliente.getMidpane());
 
          } else if (e.getSource() == this.cadastroCliente.getjButtonBuscar()) {
-            BuscaCliente buscaCliente = new BuscaCliente(null, true);
-            ControllerCadastroCliente controllerCadastroCliente = new ControllerCadastroCliente(cadastroCliente);
+            BuscaCliente buscaCliente = new BuscaCliente();
+            ControllerBuscaCliente controllerBuscaCliente = new ControllerBuscaCliente(buscaCliente);
             
             buscaCliente.setVisible(true);
 
         } else if (e.getSource() == this.cadastroCliente.getjButtonBuscarcep()) {
       
-            BuscaEndereco buscaEndereco = new BuscaEndereco(null, true);
+            BuscaEndereco buscaEndereco = new BuscaEndereco();
             ControllerBuscaEndereco controllerBuscaEndereco = new ControllerBuscaEndereco(buscaEndereco);
             buscaEndereco.setVisible(true);
             

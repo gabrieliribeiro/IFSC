@@ -29,6 +29,7 @@ public class ControllerCadastroFornecedor implements ActionListener {
         
         
         utilities.Utilities.ativa(true, this.cadastroFornecedor.getBottompane());
+        utilities.Utilities.ativa(true, cadastroFornecedor.getToppane());
         utilities.Utilities.limpaComponentes(true, this.cadastroFornecedor.getMidpane());
         
     }
@@ -51,12 +52,12 @@ public class ControllerCadastroFornecedor implements ActionListener {
             utilities.Utilities.limpaComponentes(false, cadastroFornecedor.getMidpane());
 
         } else if (e.getSource() == this.cadastroFornecedor.getjButtonBuscar()) {
-            BuscaFornecedor buscaFornecedor= new BuscaFornecedor(null, true);
+            BuscaFornecedor buscaFornecedor= new BuscaFornecedor();
             ControllerBuscaFornecedor controllerBuscaFornecedor = new ControllerBuscaFornecedor(buscaFornecedor);
             buscaFornecedor.setVisible(true);
 
         } else if (e.getSource() == this.cadastroFornecedor.getjButtonBuscarcep()){
-            BuscaEndereco buscaEndereco = new BuscaEndereco(null, true);
+            BuscaEndereco buscaEndereco = new BuscaEndereco();
             ControllerBuscaEndereco controllerBuscaEndereco = new ControllerBuscaEndereco(buscaEndereco);
             buscaEndereco.setVisible(true);
             

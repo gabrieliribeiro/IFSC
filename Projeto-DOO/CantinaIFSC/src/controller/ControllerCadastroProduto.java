@@ -28,6 +28,7 @@ public class ControllerCadastroProduto implements ActionListener{
         this.cadastroProduto.getjButtonBuscar().addActionListener(this);
         
         utilities.Utilities.ativa(true, this.cadastroProduto.getBottompane());
+        utilities.Utilities.ativa(true, cadastroProduto.getToppane());
         utilities.Utilities.limpaComponentes(true, this.cadastroProduto.getMidpane());
 
     }
@@ -50,7 +51,7 @@ public class ControllerCadastroProduto implements ActionListener{
             utilities.Utilities.limpaComponentes(false, cadastroProduto.getMidpane());
 
         } else if (e.getSource() == this.cadastroProduto.getjButtonBuscar()) {
-            BuscaProduto buscaProduto = new BuscaProduto(null, true);
+            BuscaProduto buscaProduto = new BuscaProduto();
             ControllerBuscaProduto controllerBuscaProduto = new ControllerBuscaProduto(buscaProduto);
             //Inserir o controller da busca de bairros
             buscaProduto.setVisible(true);

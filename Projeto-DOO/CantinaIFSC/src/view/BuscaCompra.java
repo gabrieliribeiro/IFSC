@@ -12,10 +12,9 @@ import javax.swing.JTextField;
  *
  * @author gabri
  */
-public class BuscaCompra extends javax.swing.JDialog {
+public class BuscaCompra extends javax.swing.JFrame {
 
-    public BuscaCompra(java.awt.Frame parent, boolean modal){
-        super(parent, modal);
+    public BuscaCompra(){
         initComponents();
     }
     
@@ -78,10 +77,16 @@ public class BuscaCompra extends javax.swing.JDialog {
         jButtonCarregar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
+        setMaximumSize(new java.awt.Dimension(1030, 740));
+        setMinimumSize(new java.awt.Dimension(1030, 740));
+        setPreferredSize(new java.awt.Dimension(1030, 740));
+        setResizable(false);
 
         jBG.setBackground(new java.awt.Color(255, 255, 255));
         jBG.setMaximumSize(new java.awt.Dimension(1030, 740));
         jBG.setMinimumSize(new java.awt.Dimension(1030, 740));
+        jBG.setPreferredSize(new java.awt.Dimension(1030, 740));
 
         toppane.setBackground(new java.awt.Color(109, 217, 108));
         toppane.setPreferredSize(new java.awt.Dimension(1030, 99));
@@ -138,6 +143,7 @@ public class BuscaCompra extends javax.swing.JDialog {
         jButtonFiltrar.setForeground(java.awt.Color.gray);
         jButtonFiltrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-filtro-30 (1).png"))); // NOI18N
         jButtonFiltrar.setText("Filtrar");
+        jButtonFiltrar.setActionCommand("0");
         jButtonFiltrar.setBorderPainted(false);
         jButtonFiltrar.setHideActionText(true);
         jButtonFiltrar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -261,7 +267,7 @@ public class BuscaCompra extends javax.swing.JDialog {
             .addGroup(bottompaneLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jButtonCarregar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jBGLayout = new javax.swing.GroupLayout(jBG);
@@ -289,7 +295,7 @@ public class BuscaCompra extends javax.swing.JDialog {
                 .addComponent(jPanelDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bottompane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -300,10 +306,11 @@ public class BuscaCompra extends javax.swing.JDialog {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jBG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBG, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void JButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonExitActionPerformed
@@ -346,16 +353,9 @@ public class BuscaCompra extends javax.swing.JDialog {
         //</editor-fold>
 
         /* Create and display the form */
-       java.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                BuscaCarteirinha dialog = new BuscaCarteirinha(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
+                new CadastroBairro().setVisible(true);
             }
         });
     }

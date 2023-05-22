@@ -12,13 +12,12 @@ import javax.swing.JTextField;
  *
  * @author gabri
  */
-public class BuscaCliente extends javax.swing.JDialog {
+public class BuscaCliente extends javax.swing.JFrame {
 
     /**
      * Creates new form TemplateBusca
      */
-    public BuscaCliente(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+    public BuscaCliente() {
         initComponents();
     }
     
@@ -76,7 +75,8 @@ public class BuscaCliente extends javax.swing.JDialog {
         bottompane = new javax.swing.JPanel();
         jButtonCarregar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
+        setResizable(false);
 
         jBG.setBackground(new java.awt.Color(255, 255, 255));
         jBG.setMaximumSize(new java.awt.Dimension(1030, 740));
@@ -88,7 +88,7 @@ public class BuscaCliente extends javax.swing.JDialog {
         jLTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
         jLTitulo.setForeground(new java.awt.Color(242, 241, 243));
         jLTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTitulo.setText("TEMPLATE");
+        jLTitulo.setText("Busca Cliente");
         jLTitulo.setToolTipText("");
         jLTitulo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
@@ -137,6 +137,7 @@ public class BuscaCliente extends javax.swing.JDialog {
         jButtonFiltrar.setForeground(java.awt.Color.gray);
         jButtonFiltrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-filtro-30 (1).png"))); // NOI18N
         jButtonFiltrar.setText("Filtrar");
+        jButtonFiltrar.setActionCommand("0");
         jButtonFiltrar.setBorderPainted(false);
         jButtonFiltrar.setHideActionText(true);
         jButtonFiltrar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -303,6 +304,7 @@ public class BuscaCliente extends javax.swing.JDialog {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void JButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonExitActionPerformed
@@ -345,16 +347,9 @@ public class BuscaCliente extends javax.swing.JDialog {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+          java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                BuscaCliente dialog = new BuscaCliente(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
+                new CadastroBairro().setVisible(true);
             }
         });
     }

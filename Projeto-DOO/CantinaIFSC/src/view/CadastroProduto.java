@@ -118,6 +118,9 @@ public class CadastroProduto extends javax.swing.JFrame{
         jButtonSave = new javax.swing.JButton();
         jButtonCancel = new javax.swing.JButton();
 
+        setAlwaysOnTop(true);
+        setResizable(false);
+
         jBG.setBackground(new java.awt.Color(255, 255, 255));
         jBG.setMaximumSize(new java.awt.Dimension(1030, 740));
         jBG.setMinimumSize(new java.awt.Dimension(1030, 740));
@@ -128,7 +131,7 @@ public class CadastroProduto extends javax.swing.JFrame{
         jLTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
         jLTitulo.setForeground(new java.awt.Color(242, 241, 243));
         jLTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLTitulo.setText("Cadastro Cidade");
+        jLTitulo.setText("Cadastro Produto");
         jLTitulo.setToolTipText("");
         jLTitulo.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
@@ -151,7 +154,7 @@ public class CadastroProduto extends javax.swing.JFrame{
                 .addGap(72, 72, 72)
                 .addComponent(JButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(254, 254, 254)
-                .addComponent(jLTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         toppaneLayout.setVerticalGroup(
@@ -182,7 +185,7 @@ public class CadastroProduto extends javax.swing.JFrame{
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
-        jButtonBuscar.setActionCommand("1");
+        jButtonBuscar.setActionCommand("0");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -302,7 +305,7 @@ public class CadastroProduto extends javax.swing.JFrame{
         jButtonNew.setBackground(new java.awt.Color(51, 204, 255));
         jButtonNew.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonNew.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-adicionar-usuário-masculino-30.png"))); // NOI18N
+        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-novo-por-cópia-30.png"))); // NOI18N
         jButtonNew.setText("Novo");
         jButtonNew.setActionCommand("0");
         jButtonNew.setBorderPainted(false);
@@ -318,7 +321,7 @@ public class CadastroProduto extends javax.swing.JFrame{
         jButtonSave.setBackground(new java.awt.Color(109, 217, 108));
         jButtonSave.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-verificar-arquivo-24.png"))); // NOI18N
+        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-salvar-30.png"))); // NOI18N
         jButtonSave.setText("Salvar");
         jButtonSave.setActionCommand("1");
         jButtonSave.setBorderPainted(false);
@@ -405,6 +408,7 @@ public class CadastroProduto extends javax.swing.JFrame{
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void JButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonExitActionPerformed

@@ -133,12 +133,16 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         jFTFDataGeracao = new javax.swing.JFormattedTextField();
         jLDataCancelamento = new javax.swing.JLabel();
         jFTFDataCancelamento = new javax.swing.JFormattedTextField();
+        jTFNomeCliente = new javax.swing.JTextField();
+        jLNome = new javax.swing.JLabel();
         bottompane = new javax.swing.JPanel();
         jButtonNew = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
         jButtonCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
+        setResizable(false);
 
         jBG.setBackground(new java.awt.Color(255, 255, 255));
         jBG.setMaximumSize(new java.awt.Dimension(1030, 740));
@@ -204,7 +208,7 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
-        jButtonBuscar.setActionCommand("1");
+        jButtonBuscar.setActionCommand("0");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -301,67 +305,96 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         jFTFDataCancelamento.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jFTFDataCancelamento.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
 
+        jTFNomeCliente.setBackground(new java.awt.Color(229, 229, 229));
+        jTFNomeCliente.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        jTFNomeCliente.setForeground(java.awt.Color.gray);
+        jTFNomeCliente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
+        jTFNomeCliente.setEnabled(false);
+
+        jLNome.setBackground(new java.awt.Color(30, 30, 30));
+        jLNome.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        jLNome.setForeground(java.awt.Color.gray);
+        jLNome.setText("Nome");
+
         javax.swing.GroupLayout midpaneLayout = new javax.swing.GroupLayout(midpane);
         midpane.setLayout(midpaneLayout);
         midpaneLayout.setHorizontalGroup(
             midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(midpaneLayout.createSequentialGroup()
                 .addGap(63, 63, 63)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLCodBarra)
-                    .addComponent(jLId)
-                    .addComponent(jLCPF)
+                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLDataCancelamento)
+                        .addComponent(jFTFDataCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(midpaneLayout.createSequentialGroup()
-                        .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLId)
+                            .addComponent(jLCPF)
+                            .addGroup(midpaneLayout.createSequentialGroup()
+                                .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(midpaneLayout.createSequentialGroup()
+                                .addComponent(jFTFCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonBuscarCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonAddCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(midpaneLayout.createSequentialGroup()
+                                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLCodBarra)
+                                    .addComponent(jTFCodBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLDataGeracao)
+                                    .addComponent(jFTFDataGeracao))))
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(midpaneLayout.createSequentialGroup()
-                        .addComponent(jFTFCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonBuscarCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonAddCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jTFCodBarra))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLDataGeracao)
-                    .addComponent(jFTFDataGeracao, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLDataCancelamento)
-                    .addComponent(jFTFDataCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(89, 89, 89))
+                        .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLNome)
+                            .addComponent(jTFNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         midpaneLayout.setVerticalGroup(
             midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
+            .addGroup(midpaneLayout.createSequentialGroup()
                 .addGap(66, 66, 66)
-                .addComponent(jLId)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                    .addComponent(jTFID))
-                .addGap(18, 18, 18)
                 .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(midpaneLayout.createSequentialGroup()
-                        .addComponent(jLCPF)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jFTFCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButtonBuscarCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAddCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(midpaneLayout.createSequentialGroup()
                         .addComponent(jLDataGeracao)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jFTFDataGeracao, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jFTFDataGeracao, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(midpaneLayout.createSequentialGroup()
-                        .addComponent(jLCodBarra)
+                        .addComponent(jLId)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTFCodBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(midpaneLayout.createSequentialGroup()
-                        .addComponent(jLDataCancelamento)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jFTFDataCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(113, Short.MAX_VALUE))
+                        .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
+                            .addComponent(jTFID)
+                            .addComponent(jButtonBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE))
+                        .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(midpaneLayout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(midpaneLayout.createSequentialGroup()
+                                        .addComponent(jLCPF)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jFTFCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButtonBuscarCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonAddCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(midpaneLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLNome)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTFNomeCliente)))
+                        .addGap(18, 18, 18)
+                        .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(midpaneLayout.createSequentialGroup()
+                                .addComponent(jLCodBarra)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTFCodBarra, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(midpaneLayout.createSequentialGroup()
+                                .addComponent(jLDataCancelamento)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jFTFDataCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         bottompane.setBackground(new java.awt.Color(255, 255, 255));
@@ -369,7 +402,7 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         jButtonNew.setBackground(new java.awt.Color(51, 204, 255));
         jButtonNew.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonNew.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-adicionar-usuário-masculino-30.png"))); // NOI18N
+        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-novo-por-cópia-30.png"))); // NOI18N
         jButtonNew.setText("Novo");
         jButtonNew.setActionCommand("0");
         jButtonNew.setBorderPainted(false);
@@ -385,7 +418,7 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         jButtonSave.setBackground(new java.awt.Color(109, 217, 108));
         jButtonSave.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-verificar-arquivo-24.png"))); // NOI18N
+        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-salvar-30.png"))); // NOI18N
         jButtonSave.setText("Salvar");
         jButtonSave.setActionCommand("1");
         jButtonSave.setBorderPainted(false);
@@ -419,7 +452,7 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         bottompaneLayout.setHorizontalGroup(
             bottompaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bottompaneLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(156, Short.MAX_VALUE)
                 .addComponent(jButtonNew, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -472,6 +505,7 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void JButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonExitActionPerformed
@@ -556,9 +590,11 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
     private javax.swing.JLabel jLDataCancelamento;
     private javax.swing.JLabel jLDataGeracao;
     private javax.swing.JLabel jLId;
+    private javax.swing.JLabel jLNome;
     private javax.swing.JLabel jLTitulo;
     private javax.swing.JTextField jTFCodBarra;
     private javax.swing.JTextField jTFID;
+    private javax.swing.JTextField jTFNomeCliente;
     private javax.swing.JPanel midpane;
     private javax.swing.JPanel toppane;
     // End of variables declaration//GEN-END:variables

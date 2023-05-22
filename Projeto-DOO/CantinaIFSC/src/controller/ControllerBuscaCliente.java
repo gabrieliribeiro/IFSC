@@ -22,9 +22,7 @@ public class ControllerBuscaCliente  implements  ActionListener{
         this.buscaCliente.getjButtonCarregar().addActionListener(this);
         this.buscaCliente.getJButtonExit().addActionListener(this);
 
-        utilities.Utilities.ativa(true, this.buscaCliente.getBottompane());
-        utilities.Utilities.ativa(true, this.buscaCliente.getMidpane());
-        utilities.Utilities.ativa(true, this.buscaCliente.getToppane());
+
     }
 
     @Override

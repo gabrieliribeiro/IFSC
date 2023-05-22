@@ -23,6 +23,7 @@ public class ControllerBuscaEndereco implements ActionListener {
         this.buscaEndereco.getJButtonExit().addActionListener(this);
         
         utilities.Utilities.ativa(true, this.buscaEndereco.getBottompane());
+        utilities.Utilities.ativa(true, buscaEndereco.getToppane());
         utilities.Utilities.ativa(true, this.buscaEndereco.getToppane());
     }
 

@@ -156,6 +156,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1280, 832));
         setName("cadastro"); // NOI18N
         setPreferredSize(new java.awt.Dimension(1280, 832));
+        setResizable(false);
         setSize(new java.awt.Dimension(1280, 832));
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
@@ -172,6 +173,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
         jBExit.setBackground(new java.awt.Color(109, 217, 108));
         jBExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-voltar-48.png"))); // NOI18N
+        jBExit.setActionCommand("0");
         jBExit.setBorderPainted(false);
         jBExit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBExit.addActionListener(new java.awt.event.ActionListener() {
@@ -219,7 +221,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
-        jButtonBuscar.setActionCommand("1");
+        jButtonBuscar.setActionCommand("0");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -759,6 +761,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         getAccessibleContext().setAccessibleName("Cantina");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonExcluiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExcluiActionPerformed

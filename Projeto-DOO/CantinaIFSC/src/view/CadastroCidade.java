@@ -105,6 +105,8 @@ public class CadastroCidade extends javax.swing.JFrame {
         jButtonCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
+        setResizable(false);
 
         jBG.setBackground(new java.awt.Color(255, 255, 255));
         jBG.setMaximumSize(new java.awt.Dimension(1030, 740));
@@ -170,7 +172,7 @@ public class CadastroCidade extends javax.swing.JFrame {
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
-        jButtonBuscar.setActionCommand("1");
+        jButtonBuscar.setActionCommand("0");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -204,6 +206,8 @@ public class CadastroCidade extends javax.swing.JFrame {
         jComboBoxUF.setBackground(new java.awt.Color(229, 229, 229));
         jComboBoxUF.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         jComboBoxUF.setForeground(java.awt.Color.gray);
+        jComboBoxUF.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Acre (AC)", "Alagoas (AL)", "Amapá (AP)", "Amazonas (AM)", "Bahia (BA)", "Ceará (CE)", "Distrito Federal (DF)", "Espírito Santo (ES)", "Goiás (GO)", "Maranhão (MA)", "Mato Grosso (MT)", "Mato Grosso do Sul (MS)", "Minas Gerais (MG)", "Pará (PA)", "Paraíba (PB)", "Paraná (PR)", "Pernambuco (PE)", "Piauí (PI)", "Rio de Janeiro (RJ)", "Rio Grande do Norte (RN)", "Rio Grande do Sul (RS)", "Rondônia (RO)", "Roraima (RR)", "Santa Catarina (SC)", "São Paulo (SP)", "Sergipe (SE)", "Tocantins (TO)" }));
+        jComboBoxUF.setSelectedIndex(-1);
         jComboBoxUF.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
         jComboBoxUF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -220,20 +224,20 @@ public class CadastroCidade extends javax.swing.JFrame {
                 .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLDescricao)
                     .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jTFDescricao, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(midpaneLayout.createSequentialGroup()
                             .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(midpaneLayout.createSequentialGroup()
-                                    .addComponent(jLId)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
                                     .addComponent(jTFId, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(29, 29, 29)
                                     .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(210, 210, 210)))
+                                    .addGap(120, 120, 120))
+                                .addGroup(midpaneLayout.createSequentialGroup()
+                                    .addComponent(jLId)
+                                    .addGap(633, 633, 633)))
                             .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jComboBoxUF, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLUF)))
-                        .addComponent(jTFDescricao, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jLUF)
+                                .addComponent(jComboBoxUF, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(117, Short.MAX_VALUE))
         );
         midpaneLayout.setVerticalGroup(
@@ -268,7 +272,7 @@ public class CadastroCidade extends javax.swing.JFrame {
         jButtonNew.setBackground(new java.awt.Color(51, 204, 255));
         jButtonNew.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonNew.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-adicionar-usuário-masculino-30.png"))); // NOI18N
+        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-novo-por-cópia-30.png"))); // NOI18N
         jButtonNew.setText("Novo");
         jButtonNew.setActionCommand("0");
         jButtonNew.setBorderPainted(false);
@@ -284,7 +288,7 @@ public class CadastroCidade extends javax.swing.JFrame {
         jButtonSave.setBackground(new java.awt.Color(109, 217, 108));
         jButtonSave.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-verificar-arquivo-24.png"))); // NOI18N
+        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-salvar-30.png"))); // NOI18N
         jButtonSave.setText("Salvar");
         jButtonSave.setActionCommand("1");
         jButtonSave.setBorderPainted(false);
@@ -371,6 +375,7 @@ public class CadastroCidade extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void JButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonExitActionPerformed

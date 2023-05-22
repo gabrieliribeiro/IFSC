@@ -21,6 +21,10 @@ public class ControllerBuscaCompra  implements ActionListener{
         this.buscaCompra.getjButtonFiltrar().addActionListener(this);
         this.buscaCompra.getjButtonCarregar().addActionListener(this);
         this.buscaCompra.getJButtonExit().addActionListener(this);
+        
+        utilities.Utilities.ativa(true, this.buscaCompra.getBottompane());
+        utilities.Utilities.ativa(true, buscaCompra.getToppane());
+        utilities.Utilities.limpaComponentes(true, this.buscaCompra.getMidpane());
     }
     
     

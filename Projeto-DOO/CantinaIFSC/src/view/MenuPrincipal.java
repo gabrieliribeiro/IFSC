@@ -38,6 +38,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jBackground = new javax.swing.JPanel();
+        jButtonLogOFF = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLImagemBg = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -64,6 +65,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setResizable(false);
 
         jBackground.setLayout(null);
+
+        jButtonLogOFF.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonLogOFF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-botão-desligar-64.png"))); // NOI18N
+        jButtonLogOFF.setBorder(null);
+        jButtonLogOFF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLogOFFActionPerformed(evt);
+            }
+        });
+        jBackground.add(jButtonLogOFF);
+        jButtonLogOFF.setBounds(1150, 690, 70, 70);
 
         jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -230,6 +242,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
@@ -302,6 +315,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         CadastroProduto cadastroProduto = new CadastroProduto();
         ControllerCadastroProduto controllerCadastroProduto = new ControllerCadastroProduto(cadastroProduto);
 
+
         //inserir a classe do controller
         cadastroProduto.setVisible(true);
     }//GEN-LAST:event_jMenuItemProdutoActionPerformed
@@ -320,6 +334,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         ControllerCadastroVenda controllerCadastroVenda = new ControllerCadastroVenda(cadastroVenda);
         cadastroVenda.setVisible(true);
     }//GEN-LAST:event_jMenuItemReceberActionPerformed
+
+    private void jButtonLogOFFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogOFFActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jButtonLogOFFActionPerformed
 
     /**
      * @param args the command line arguments
@@ -358,6 +377,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jBackground;
+    private javax.swing.JButton jButtonLogOFF;
     private javax.swing.JLabel jLImagemBg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenuAjuda;

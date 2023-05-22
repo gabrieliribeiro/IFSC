@@ -138,15 +138,21 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jButtonCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(1280, 832));
+        setMaximumSize(new java.awt.Dimension(1030, 740));
+        setMinimumSize(new java.awt.Dimension(1030, 740));
+        setResizable(false);
 
         jBG.setBackground(new java.awt.Color(255, 255, 255));
         jBG.setMaximumSize(new java.awt.Dimension(1030, 740));
+        jBG.setMinimumSize(new java.awt.Dimension(1030, 740));
         jBG.setPreferredSize(new java.awt.Dimension(1030, 740));
 
         toppane4.setBackground(new java.awt.Color(109, 217, 108));
-        toppane4.setPreferredSize(new java.awt.Dimension(1280, 99));
+        toppane4.setMaximumSize(new java.awt.Dimension(1030, 99));
+        toppane4.setMinimumSize(new java.awt.Dimension(1030, 99));
+        toppane4.setPreferredSize(new java.awt.Dimension(1030, 99));
 
         jLTitulo4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
         jLTitulo4.setForeground(new java.awt.Color(242, 241, 243));
@@ -157,6 +163,7 @@ public class CadastroEndereco extends javax.swing.JFrame {
 
         jBExit4.setBackground(new java.awt.Color(109, 217, 108));
         jBExit4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-voltar-48.png"))); // NOI18N
+        jBExit4.setActionCommand("0");
         jBExit4.setBorderPainted(false);
         jBExit4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBExit4.addActionListener(new java.awt.event.ActionListener() {
@@ -187,7 +194,9 @@ public class CadastroEndereco extends javax.swing.JFrame {
         );
 
         midpane.setBackground(new java.awt.Color(255, 255, 255));
-        midpane.setPreferredSize(new java.awt.Dimension(1280, 152));
+        midpane.setMaximumSize(new java.awt.Dimension(1030, 152));
+        midpane.setMinimumSize(new java.awt.Dimension(1030, 152));
+        midpane.setPreferredSize(new java.awt.Dimension(1030, 152));
 
         jLId.setBackground(new java.awt.Color(30, 30, 30));
         jLId.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
@@ -208,7 +217,7 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
-        jButtonBuscar.setActionCommand("1");
+        jButtonBuscar.setActionCommand("0");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -336,11 +345,13 @@ public class CadastroEndereco extends javax.swing.JFrame {
         );
 
         bottompane.setBackground(new java.awt.Color(255, 255, 255));
+        bottompane.setMaximumSize(new java.awt.Dimension(1030, 129));
+        bottompane.setMinimumSize(new java.awt.Dimension(1030, 129));
 
         jButtonNew.setBackground(new java.awt.Color(51, 204, 255));
         jButtonNew.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonNew.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-adicionar-usuário-masculino-30.png"))); // NOI18N
+        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-novo-por-cópia-30.png"))); // NOI18N
         jButtonNew.setText("Novo");
         jButtonNew.setActionCommand("0");
         jButtonNew.setBorderPainted(false);
@@ -356,7 +367,7 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jButtonSave.setBackground(new java.awt.Color(109, 217, 108));
         jButtonSave.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-verificar-arquivo-24.png"))); // NOI18N
+        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-salvar-30.png"))); // NOI18N
         jButtonSave.setText("Salvar");
         jButtonSave.setActionCommand("1");
         jButtonSave.setBorderPainted(false);
@@ -413,11 +424,11 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jBG.setLayout(jBGLayout);
         jBGLayout.setHorizontalGroup(
             jBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(toppane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE)
+            .addComponent(toppane4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jBGLayout.createSequentialGroup()
                 .addComponent(bottompane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(midpane, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE)
+            .addComponent(midpane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jBGLayout.setVerticalGroup(
             jBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -442,6 +453,7 @@ public class CadastroEndereco extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed

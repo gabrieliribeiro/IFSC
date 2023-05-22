@@ -32,6 +32,7 @@ public class ControllerCadastroFuncionario implements ActionListener {
         
         
         utilities.Utilities.ativa(true, this.cadastroFuncionario.getBottompane());
+        utilities.Utilities.ativa(true, cadastroFuncionario.getToppane());
         utilities.Utilities.limpaComponentes(true, this.cadastroFuncionario.getMidpane());
     }
 
@@ -53,12 +54,12 @@ public class ControllerCadastroFuncionario implements ActionListener {
             utilities.Utilities.limpaComponentes(false, cadastroFuncionario.getMidpane());
 
         } else if (e.getSource() == this.cadastroFuncionario.getjButtonBuscar()) {
-            BuscaFuncionario buscaFuncionario = new BuscaFuncionario(null, true);
+            BuscaFuncionario buscaFuncionario = new BuscaFuncionario();
             ControllerBuscaFuncionario controllerBuscaFuncionario = new ControllerBuscaFuncionario(buscaFuncionario);
             buscaFuncionario.setVisible(true);
              
         } else if (e.getSource() == this.cadastroFuncionario.getjButtonBuscarcep()){
-             BuscaEndereco buscaEndereco = new BuscaEndereco(null, true);
+             BuscaEndereco buscaEndereco = new BuscaEndereco();
              ControllerBuscaEndereco controllerBuscaEndereco = new ControllerBuscaEndereco(buscaEndereco);
              buscaEndereco.setVisible(true);
                 

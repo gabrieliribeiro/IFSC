@@ -31,6 +31,7 @@ public class ControllerCadastroVenda implements ActionListener {
         this.cadastroVenda.getjButtonAddCarteirinha().addActionListener(this);
 
         utilities.Utilities.ativa(true, this.cadastroVenda.getBottompane());
+        utilities.Utilities.ativa(true, cadastroVenda.getToppane4());
         utilities.Utilities.limpaComponentes(true, this.cadastroVenda.getMidpane());
     }
 
@@ -52,7 +53,7 @@ public class ControllerCadastroVenda implements ActionListener {
             utilities.Utilities.limpaComponentes(false, cadastroVenda.getMidpane());
 
         } else if (e.getSource() == this.cadastroVenda.getjButtonBuscar()) {
-            BuscaVenda buscaVenda = new BuscaVenda(null, true);
+            BuscaVenda buscaVenda = new BuscaVenda();
             ControllerBuscaVenda controllerBuscaVenda = new ControllerBuscaVenda(buscaVenda);
             buscaVenda.setVisible(true);
 
@@ -63,7 +64,7 @@ public class ControllerCadastroVenda implements ActionListener {
             cadastroCarteirinha.setVisible(true);
             
         } else if (e.getSource() == this.cadastroVenda.getjButtonBuscarCarteirinha()) {
-            BuscaCarteirinha buscaCarteirinha = new BuscaCarteirinha(null, true);
+            BuscaCarteirinha buscaCarteirinha = new BuscaCarteirinha();
             ControllerBuscaCarteirinha controllerBuscaCarteirinha = new ControllerBuscaCarteirinha(buscaCarteirinha);
             buscaCarteirinha.setVisible(true);
 

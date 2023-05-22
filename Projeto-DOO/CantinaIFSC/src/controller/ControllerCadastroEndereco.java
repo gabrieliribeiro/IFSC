@@ -25,6 +25,7 @@ public class ControllerCadastroEndereco implements ActionListener{
         this.cadastroEndereco.getjButtonBuscar().addActionListener(this);
         
         utilities.Utilities.ativa(true, this.cadastroEndereco.getBottompane());
+        utilities.Utilities.ativa(true, cadastroEndereco.getToppane4());
         utilities.Utilities.limpaComponentes(true, this.cadastroEndereco.getMidpane());
     }
 
@@ -49,7 +50,7 @@ public class ControllerCadastroEndereco implements ActionListener{
             utilities.Utilities.limpaComponentes(false, cadastroEndereco.getMidpane());
 
         } else if (e.getSource() == this.cadastroEndereco.getjButtonBuscar()) {
-            BuscaEndereco buscaEndereco = new BuscaEndereco(null, true);
+            BuscaEndereco buscaEndereco = new BuscaEndereco();
             ControllerBuscaEndereco controllerBuscaEndereco = new ControllerBuscaEndereco(buscaEndereco);
             //Inserir o controller da busca de bairros
             buscaEndereco.setVisible(true);

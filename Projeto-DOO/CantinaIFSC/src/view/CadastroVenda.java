@@ -170,6 +170,8 @@ public class CadastroVenda extends javax.swing.JFrame {
         jButtonCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
+        setResizable(false);
 
         jBG.setBackground(new java.awt.Color(255, 255, 255));
         jBG.setMaximumSize(new java.awt.Dimension(1030, 740));
@@ -189,6 +191,7 @@ public class CadastroVenda extends javax.swing.JFrame {
 
         jBExit4.setBackground(new java.awt.Color(109, 217, 108));
         jBExit4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-voltar-48.png"))); // NOI18N
+        jBExit4.setActionCommand("0");
         jBExit4.setBorderPainted(false);
         jBExit4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBExit4.addActionListener(new java.awt.event.ActionListener() {
@@ -237,6 +240,7 @@ public class CadastroVenda extends javax.swing.JFrame {
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
+        jButtonBuscar.setActionCommand("0");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -455,7 +459,7 @@ public class CadastroVenda extends javax.swing.JFrame {
         jButtonNew.setBackground(new java.awt.Color(51, 204, 255));
         jButtonNew.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonNew.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-adicionar-usuário-masculino-30.png"))); // NOI18N
+        jButtonNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-novo-por-cópia-30.png"))); // NOI18N
         jButtonNew.setText("Novo");
         jButtonNew.setActionCommand("0");
         jButtonNew.setBorderPainted(false);
@@ -471,7 +475,7 @@ public class CadastroVenda extends javax.swing.JFrame {
         jButtonSave.setBackground(new java.awt.Color(109, 217, 108));
         jButtonSave.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jButtonSave.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-verificar-arquivo-24.png"))); // NOI18N
+        jButtonSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-salvar-30.png"))); // NOI18N
         jButtonSave.setText("Salvar");
         jButtonSave.setActionCommand("1");
         jButtonSave.setBorderPainted(false);
@@ -554,6 +558,7 @@ public class CadastroVenda extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBExit4jBExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBExit4jBExitActionPerformed

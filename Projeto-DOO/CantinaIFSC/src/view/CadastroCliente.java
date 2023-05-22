@@ -250,12 +250,13 @@ public class CadastroCliente extends javax.swing.JFrame {
         jButtonCancel = new javax.swing.JButton();
         jButtonExclui = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Fomulário de Teste da GABISZOKA");
         setAlwaysOnTop(true);
         setMaximumSize(new java.awt.Dimension(1280, 832));
         setName("cadastro"); // NOI18N
         setPreferredSize(new java.awt.Dimension(1280, 832));
+        setResizable(false);
         setSize(new java.awt.Dimension(1280, 832));
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
@@ -272,6 +273,7 @@ public class CadastroCliente extends javax.swing.JFrame {
 
         jBExit.setBackground(new java.awt.Color(109, 217, 108));
         jBExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-voltar-48.png"))); // NOI18N
+        jBExit.setActionCommand("0");
         jBExit.setBorderPainted(false);
         jBExit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jBExit.addActionListener(new java.awt.event.ActionListener() {
@@ -312,14 +314,16 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldId.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldId.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldId.setForeground(java.awt.Color.gray);
+        jTextFieldId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
+        jTextFieldId.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         jButtonBuscar.setBackground(new java.awt.Color(229, 229, 229));
         jButtonBuscar.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jButtonBuscar.setForeground(java.awt.Color.gray);
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
         jButtonBuscar.setText("Buscar");
-        jButtonBuscar.setActionCommand("1");
+        jButtonBuscar.setActionCommand("0");
         jButtonBuscar.setBorderPainted(false);
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -344,7 +348,7 @@ public class CadastroCliente extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         jFTFDataNascimento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFTFDataNascimento.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        jFTFDataNascimento.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
 
         jLStatus.setBackground(new java.awt.Color(30, 30, 30));
         jLStatus.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
@@ -352,7 +356,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLStatus.setText("Status");
 
         jComboBStatus.setBackground(new java.awt.Color(229, 229, 229));
-        jComboBStatus.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        jComboBStatus.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jComboBStatus.setForeground(java.awt.Color.gray);
         jComboBStatus.setMaximumRowCount(2);
         jComboBStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ativo", "Inativo" }));
@@ -372,6 +376,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldNome.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldNome.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldNome.setForeground(java.awt.Color.gray);
+        jTextFieldNome.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldNome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jLCPF.setBackground(new java.awt.Color(30, 30, 30));
@@ -387,7 +392,8 @@ public class CadastroCliente extends javax.swing.JFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        jFTFCPF.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        jFTFCPF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jFTFCPF.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
 
         jLRg.setBackground(new java.awt.Color(30, 30, 30));
         jLRg.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
@@ -397,6 +403,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldRG.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldRG.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldRG.setForeground(java.awt.Color.gray);
+        jTextFieldRG.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldRG.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jLMatricula.setBackground(new java.awt.Color(30, 30, 30));
@@ -407,6 +414,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldMatricula.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldMatricula.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldMatricula.setForeground(java.awt.Color.gray);
+        jTextFieldMatricula.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldMatricula.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jLFone1.setBackground(new java.awt.Color(30, 30, 30));
@@ -423,7 +431,7 @@ public class CadastroCliente extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         jFTFFone1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFTFFone1.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        jFTFFone1.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
 
         jLEmail.setBackground(new java.awt.Color(30, 30, 30));
         jLEmail.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
@@ -433,6 +441,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldEmail.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldEmail.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldEmail.setForeground(java.awt.Color.gray);
+        jTextFieldEmail.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldEmail.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jLFone2.setBackground(new java.awt.Color(30, 30, 30));
@@ -449,7 +458,7 @@ public class CadastroCliente extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         jFTFFone2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jFTFFone2.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
+        jFTFFone2.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
 
         jLCep.setBackground(new java.awt.Color(30, 30, 30));
         jLCep.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
@@ -459,6 +468,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldCEP.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldCEP.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldCEP.setForeground(java.awt.Color.gray);
+        jTextFieldCEP.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldCEP.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jButtonBuscarcep.setBackground(new java.awt.Color(229, 229, 229));
@@ -496,6 +506,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldComplemento.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldComplemento.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldComplemento.setForeground(java.awt.Color.gray);
+        jTextFieldComplemento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldComplemento.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jLRua.setBackground(new java.awt.Color(30, 30, 30));
@@ -506,6 +517,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldRua.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldRua.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldRua.setForeground(java.awt.Color.gray);
+        jTextFieldRua.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldRua.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jLBairro.setBackground(new java.awt.Color(30, 30, 30));
@@ -516,6 +528,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldBairro.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldBairro.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldBairro.setForeground(java.awt.Color.gray);
+        jTextFieldBairro.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldBairro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jLCidade.setBackground(new java.awt.Color(30, 30, 30));
@@ -526,6 +539,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldCidade.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldCidade.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldCidade.setForeground(java.awt.Color.gray);
+        jTextFieldCidade.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldCidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jLEstado.setBackground(new java.awt.Color(30, 30, 30));
@@ -536,6 +550,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldEstado.setBackground(new java.awt.Color(229, 229, 229));
         jTextFieldEstado.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldEstado.setForeground(java.awt.Color.gray);
+        jTextFieldEstado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextFieldEstado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         javax.swing.GroupLayout midpaneLayout = new javax.swing.GroupLayout(midpane);
@@ -832,6 +847,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         getAccessibleContext().setAccessibleName("Cantina");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed

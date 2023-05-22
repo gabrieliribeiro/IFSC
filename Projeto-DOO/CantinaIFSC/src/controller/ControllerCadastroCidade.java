@@ -28,7 +28,7 @@ public class ControllerCadastroCidade implements ActionListener {
 
         utilities.Utilities.ativa(true, this.cadastroCidade.getBottompane());
         utilities.Utilities.ativa(true, this.cadastroCidade.getToppane());
-        utilities.Utilities.limpaComponentes(false, this.cadastroCidade.getMidpane());
+        
 
     }
 
@@ -51,7 +51,7 @@ public class ControllerCadastroCidade implements ActionListener {
             utilities.Utilities.limpaComponentes(false, cadastroCidade.getMidpane());
 
         } else if(e.getSource() == this.cadastroCidade.getjButtonBuscar()){
-            BuscaCidade buscaCidade = new BuscaCidade(null, true);
+            BuscaCidade buscaCidade = new BuscaCidade();
             ControllerBuscaCidade controllerBuscaCidade = new ControllerBuscaCidade(buscaCidade);
             //Inserir o controller da busca de bairros
             buscaCidade.setVisible(true);

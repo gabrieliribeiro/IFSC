@@ -26,10 +26,7 @@ public class ControllerCadastroBairro implements ActionListener {
         this.cadastroBairro.getjButtonSave().addActionListener(this);
         this.cadastroBairro.getjButtonCancel().addActionListener(this);
 
-        utilities.Utilities.ativa(true, this.cadastroBairro.getToppane());
-        utilities.Utilities.ativa(false, this.cadastroBairro.getMidpane());
         utilities.Utilities.ativa(true, this.cadastroBairro.getBottompane());
-
     }
 
     @Override
@@ -49,7 +46,7 @@ public class ControllerCadastroBairro implements ActionListener {
             utilities.Utilities.ativa(true, cadastroBairro.getMidpane());
             utilities.Utilities.limpaComponentes(false, cadastroBairro.getMidpane());
         } else if (e.getSource() == this.cadastroBairro.getjButtonBuscar()) {
-            BuscaBairro buscaBairro = new BuscaBairro(null, true);
+            BuscaBairro buscaBairro = new BuscaBairro();
             ControllerBuscaBairro controllerBuscaBairro = new ControllerBuscaBairro(buscaBairro);
             
             buscaBairro.setVisible(true);

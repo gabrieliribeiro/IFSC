@@ -31,6 +31,7 @@ public class ControllerCadastroCompra implements ActionListener {
         this.cadastroCompra.getjButtonAddCnpj().addActionListener(this);
         
         utilities.Utilities.ativa(true, this.cadastroCompra.getBottompane());
+        utilities.Utilities.ativa(true, cadastroCompra.getToppane4());
         utilities.Utilities.limpaComponentes(true, this.cadastroCompra.getMidpane());
     }
     
@@ -52,7 +53,7 @@ public class ControllerCadastroCompra implements ActionListener {
             utilities.Utilities.limpaComponentes(false, cadastroCompra.getMidpane());
             
         } else if (e.getSource() == this.cadastroCompra.getjButtonBuscar()) {
-            BuscaCompra buscaCompra = new BuscaCompra(null, true);
+            BuscaCompra buscaCompra = new BuscaCompra();
             ControllerBuscaCompra controllerBuscaCompra = new ControllerBuscaCompra(buscaCompra);
             buscaCompra.setVisible(true);
             
@@ -61,7 +62,7 @@ public class ControllerCadastroCompra implements ActionListener {
             ControllerCadastroFornecedor controllerCadastroFornecedor = new ControllerCadastroFornecedor(cadastroFornecedor);
             cadastroFornecedor.setVisible(true);
         } else if (e.getSource() == this.cadastroCompra.getjButtonBuscarCnpj()) {
-            BuscaFornecedor buscaFornecedor = new BuscaFornecedor(null, true);
+            BuscaFornecedor buscaFornecedor = new BuscaFornecedor();
             ControllerBuscaFornecedor controllerBuscaFornecedor = new ControllerBuscaFornecedor(buscaFornecedor);
             buscaFornecedor.setVisible(true);
         }

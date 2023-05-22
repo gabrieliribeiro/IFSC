@@ -32,7 +32,7 @@ public class ControllerCadastroCarteirinha implements ActionListener {
 
         utilities.Utilities.ativa(true, this.cadastroCarteirinha.getBottompane());
         utilities.Utilities.ativa(true, this.cadastroCarteirinha.getToppane());
-        utilities.Utilities.limpaComponentes(false, this.cadastroCarteirinha.getMidpane());
+        
 
     }
 
@@ -54,7 +54,8 @@ public class ControllerCadastroCarteirinha implements ActionListener {
             utilities.Utilities.limpaComponentes(false, cadastroCarteirinha.getMidpane());
 
         } else if (e.getSource() == this.cadastroCarteirinha.getjButtonBuscar()) {
-            BuscaCarteirinha buscaCarteirinha = new BuscaCarteirinha(null, true);
+            
+            BuscaCarteirinha buscaCarteirinha = new BuscaCarteirinha();
             ControllerBuscaCarteirinha controllerBuscaCarteirinha = new ControllerBuscaCarteirinha(buscaCarteirinha);
             //Inserir o controller da busca de bairros
             buscaCarteirinha.setVisible(true);
@@ -65,7 +66,7 @@ public class ControllerCadastroCarteirinha implements ActionListener {
             cadastroCliente.setVisible(true);
 
         } else if (e.getSource() == this.cadastroCarteirinha.getjButtonPesquisarCPF()) {
-            BuscaCliente buscaCliente = new BuscaCliente(null, true);
+            BuscaCliente buscaCliente = new BuscaCliente();
             ControllerBuscaCliente controllerBuscaCliente = new ControllerBuscaCliente(buscaCliente);
             buscaCliente.setVisible(true);
         }
