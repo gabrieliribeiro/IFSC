@@ -14,6 +14,7 @@ import view.BuscaEndereco;
  */
 public class ControllerBuscaEndereco implements ActionListener {
     BuscaEndereco buscaEndereco;
+   
     
     public ControllerBuscaEndereco( BuscaEndereco buscaEndereco){
         this.buscaEndereco = buscaEndereco;

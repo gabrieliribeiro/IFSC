@@ -6,6 +6,8 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
+import model.bo.Bairro;
 import view.BuscaBairro;
 
 /**
@@ -31,8 +33,22 @@ public class ControllerBuscaBairro implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==this.buscaBairro.getjButtonFiltrar()) {
+            DAO.ClasseDados.getInstance();
+            
+            DefaultTableModel tabela = (DefaultTableModel) this.buscaBairro.getjTable().getModel();
+            for (Bairro bairroAtual : DAO.ClasseDados.listaBairro) {
+                tabela.addRow(new Object[]{bairroAtual.getId(),
+                                  bairroAtual.getDescricao() });
+            }
             
         }else if(e.getSource()==this.buscaBairro.getjButtonCarregar()){ 
+            
+            
+            
+            //controller.EnderecoRegistroController.codigoBairro = (int) this.bairroPesquisa.getTabelaDados().getValueAt(this.bairroPesquisa.getTabelaDados().getSelectedRow(), 0);
+            //controller.BairroRegistroController.codigo = (int) this.bairroPesquisa.getTabelaDados().getValueAt(this.bairroPesquisa.getTabelaDados().getSelectedRow(), 0);
+
+            //this.bairroPesquisa.dispose();
             
         }else if (e.getSource()==this.buscaBairro.getJButtonExit()) {
             this.buscaBairro.dispose();

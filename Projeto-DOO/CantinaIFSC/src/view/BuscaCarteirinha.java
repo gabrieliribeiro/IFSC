@@ -145,7 +145,7 @@ public class BuscaCarteirinha extends javax.swing.JFrame {
         jButtonFiltrar.setForeground(java.awt.Color.gray);
         jButtonFiltrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-filtro-30 (1).png"))); // NOI18N
         jButtonFiltrar.setText("Filtrar");
-        jButtonFiltrar.setActionCommand("0");
+        jButtonFiltrar.setActionCommand("1");
         jButtonFiltrar.setBorderPainted(false);
         jButtonFiltrar.setHideActionText(true);
         jButtonFiltrar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -183,22 +183,15 @@ public class BuscaCarteirinha extends javax.swing.JFrame {
         jTable.setForeground(java.awt.Color.gray);
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null}
+                {null, null, null}
             },
             new String [] {
-                "ID", "CPF", "Data Geração", "Data Cancelamento", "Códido de Barra"
+                "ID", "CPF", "Nome"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
-            };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -207,15 +200,11 @@ public class BuscaCarteirinha extends javax.swing.JFrame {
         jScrollPane.setViewportView(jTable);
         if (jTable.getColumnModel().getColumnCount() > 0) {
             jTable.getColumnModel().getColumn(0).setResizable(false);
-            jTable.getColumnModel().getColumn(0).setPreferredWidth(130);
+            jTable.getColumnModel().getColumn(0).setPreferredWidth(90);
             jTable.getColumnModel().getColumn(1).setResizable(false);
-            jTable.getColumnModel().getColumn(1).setPreferredWidth(200);
+            jTable.getColumnModel().getColumn(1).setPreferredWidth(150);
             jTable.getColumnModel().getColumn(2).setResizable(false);
-            jTable.getColumnModel().getColumn(2).setPreferredWidth(250);
-            jTable.getColumnModel().getColumn(3).setResizable(false);
-            jTable.getColumnModel().getColumn(3).setPreferredWidth(250);
-            jTable.getColumnModel().getColumn(4).setResizable(false);
-            jTable.getColumnModel().getColumn(4).setPreferredWidth(250);
+            jTable.getColumnModel().getColumn(2).setPreferredWidth(450);
         }
 
         javax.swing.GroupLayout jPanelDadosLayout = new javax.swing.GroupLayout(jPanelDados);

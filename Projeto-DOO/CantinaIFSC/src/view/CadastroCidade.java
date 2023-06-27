@@ -104,7 +104,7 @@ public class CadastroCidade extends javax.swing.JFrame {
         jButtonSave = new javax.swing.JButton();
         jButtonCancel = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
         setResizable(false);
 

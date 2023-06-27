@@ -315,6 +315,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jTextFieldId.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jTextFieldId.setForeground(java.awt.Color.gray);
         jTextFieldId.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldId.setActionCommand("0");
         jTextFieldId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
         jTextFieldId.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
@@ -475,7 +476,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         jButtonBuscarcep.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
         jButtonBuscarcep.setForeground(java.awt.Color.gray);
         jButtonBuscarcep.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
-        jButtonBuscarcep.setActionCommand("1");
+        jButtonBuscarcep.setActionCommand("0");
         jButtonBuscarcep.setBorderPainted(false);
         jButtonBuscarcep.setHideActionText(true);
         jButtonBuscarcep.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
@@ -488,7 +489,7 @@ public class CadastroCliente extends javax.swing.JFrame {
 
         jButtonAddCEP.setBackground(new java.awt.Color(229, 229, 229));
         jButtonAddCEP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-soma-30.png"))); // NOI18N
-        jButtonAddCEP.setActionCommand("1");
+        jButtonAddCEP.setActionCommand("0");
         jButtonAddCEP.setBorderPainted(false);
         jButtonAddCEP.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonAddCEP.setIconTextGap(0);

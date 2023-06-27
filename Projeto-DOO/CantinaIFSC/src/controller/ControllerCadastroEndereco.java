@@ -6,6 +6,12 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import model.bo.Bairro;
+import model.bo.Cidade;
+import model.bo.Endereco;
 import view.BuscaEndereco;
 import view.CadastroEndereco;
 
@@ -13,6 +19,9 @@ import view.CadastroEndereco;
 public class ControllerCadastroEndereco implements ActionListener{
     
     CadastroEndereco cadastroEndereco;
+      
+    public static int codigoCidade, codigoBairro, codigo;
+    public static int idCidade, idBairro; 
 
     public ControllerCadastroEndereco(CadastroEndereco cadastroEndereco) {
         
@@ -23,20 +32,71 @@ public class ControllerCadastroEndereco implements ActionListener{
         this.cadastroEndereco.getjButtonCancel().addActionListener(this);
         this.cadastroEndereco.getjButtonSave().addActionListener(this);
         this.cadastroEndereco.getjButtonBuscar().addActionListener(this);
+        this.cadastroEndereco.getjButtonBuscarBairro().addActionListener(this);
+        this.cadastroEndereco.getjButtonBuscarCidade().addActionListener(this);
+        this.cadastroEndereco.getjButtonAddBairro().addActionListener(this);
+        this.cadastroEndereco.getjButtonAddCidade().addActionListener(this);
         
         utilities.Utilities.ativa(true, this.cadastroEndereco.getBottompane());
-        utilities.Utilities.ativa(true, cadastroEndereco.getToppane4());
-        utilities.Utilities.limpaComponentes(true, this.cadastroEndereco.getMidpane());
+        utilities.Utilities.ativa(true, this.cadastroEndereco.getToppane4());
+        utilities.Utilities.limpaComponentes(false, this.cadastroEndereco.getMidpane());
     }
+    
+    WindowListener disposeListener = new WindowAdapter() {
 
-    
-    
+        public void windowClosed(WindowEvent e) {
+            if (codigo != 0) {
+                Endereco endereco = new Endereco();
+                endereco = DAO.ClasseDados.listaEndereco.get(codigo - 1);
+                utilities.Utilities.ativa(true, cadastroEndereco.getBottompane());
+                utilities.Utilities.ativa(true, cadastroEndereco.getToppane4());
+                utilities.Utilities.limpaComponentes(false, cadastroEndereco.getMidpane());
+
+                cadastroEndereco.getjTFID().setText(endereco.getId() + "");
+                cadastroEndereco.getjTFCEP().setText(endereco.getCep());
+                cadastroEndereco.getjTFLogradouro().setText(endereco.getLogradouro());
+                cadastroEndereco.getjTFBairro().setText(endereco.getBairro().getDescricao());
+                cadastroEndereco.getjTFCidade().setText(endereco.getCidade().getDescricao());
+
+                cadastroEndereco.getjTFID().setEnabled(false);
+            }
+        }
+    };
+
+    WindowListener disposeListenerBairro = new WindowAdapter() {
+        @Override
+        public void windowClosed(WindowEvent e) {
+            if (codigo != 0) {
+                Bairro bairro;
+                bairro = DAO.ClasseDados.listaBairro.get(codigoBairro - 1);
+                utilities.Utilities.ativa(false, cadastroEndereco.getBottompane());
+                idBairro = bairro.getId() - 1;
+
+                cadastroEndereco.getjTFBairro().setText(bairro.getDescricao());
+            }
+        }
+    };
+
+    WindowListener disposeListenerCidade = new WindowAdapter() {
+        @Override
+        public void windowClosed(WindowEvent e) {
+            if (codigo != 0) {
+                Cidade cidade;
+                cidade = DAO.ClasseDados.listaCidade.get(codigoBairro - 1);
+                utilities.Utilities.ativa(false, cadastroEndereco.getBottompane());
+                idBairro = cidade.getId() - 1;
+
+                cadastroEndereco.getjTFCidade().setText(cidade.getDescricao());
+            }
+        }
+    };
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.cadastroEndereco.getjButtonNew()) {
             utilities.Utilities.ativa(false, this.cadastroEndereco.getBottompane());
             utilities.Utilities.limpaComponentes(true, this.cadastroEndereco.getMidpane());
+             this.cadastroEndereco.getjTFID().setEnabled(false);
 
         } else if (e.getSource() == this.cadastroEndereco.getjBExit4()) {
             this.cadastroEndereco.dispose();
@@ -46,6 +106,16 @@ public class ControllerCadastroEndereco implements ActionListener{
             utilities.Utilities.limpaComponentes(false, this.cadastroEndereco.getMidpane());
 
         } else if (e.getSource() == this.cadastroEndereco.getjButtonSave()) {
+            Endereco endereco = new Endereco();
+            
+            endereco.setId(DAO.ClasseDados.listaEndereco.size() + 1);
+            endereco.setLogradouro(this.cadastroEndereco.getjTFLogradouro().getText());
+            endereco.setCep(this.cadastroEndereco.getjTFCEP().getText());
+            endereco.setBairro(DAO.ClasseDados.listaBairro.get(idBairro));
+            endereco.setCidade(DAO.ClasseDados.listaCidade.get(idCidade) );
+            
+            //criar uma tela de retorno para o usuário
+            
             utilities.Utilities.ativa(true, cadastroEndereco.getBottompane());
             utilities.Utilities.limpaComponentes(false, cadastroEndereco.getMidpane());
 

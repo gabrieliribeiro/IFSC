@@ -178,6 +178,7 @@ public class CadastroProduto extends javax.swing.JFrame{
         jTFId.setBackground(new java.awt.Color(229, 229, 229));
         jTFId.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         jTFId.setForeground(java.awt.Color.gray);
+        jTFId.setActionCommand("0");
         jTFId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jButtonBuscar.setBackground(new java.awt.Color(229, 229, 229));

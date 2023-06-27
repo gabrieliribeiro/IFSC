@@ -6,6 +6,7 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import model.bo.Bairro;
 import view.BuscaBairro;
 import view.CadastroBairro;
 
@@ -32,20 +33,31 @@ public class ControllerCadastroBairro implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.cadastroBairro.getjButtonNew()) {
+            
             utilities.Utilities.ativa(false, this.cadastroBairro.getBottompane());
             utilities.Utilities.ativa(true, this.cadastroBairro.getMidpane());
             
         } else if (e.getSource() == this.cadastroBairro.getJButtonExit()) {
+            
             this.cadastroBairro.dispose();
             
         } else if (e.getSource() == this.cadastroBairro.getjButtonCancel()){
+            
             utilities.Utilities.ativa(true, this.cadastroBairro.getBottompane());
             utilities.Utilities.limpaComponentes(false, this.cadastroBairro.getMidpane());
             
         } else if (e.getSource() == this.cadastroBairro.getjButtonSave()) {
+            
+            Bairro bairro = new Bairro();
+            
+            bairro.setId(DAO.ClasseDados.listaBairro.size()+1);
+            bairro.setDescricao(this.cadastroBairro.getjTFDescricao().getText());
+            DAO.ClasseDados.listaBairro.add(bairro);
+            
             utilities.Utilities.ativa(true, cadastroBairro.getMidpane());
             utilities.Utilities.limpaComponentes(false, cadastroBairro.getMidpane());
         } else if (e.getSource() == this.cadastroBairro.getjButtonBuscar()) {
+            
             BuscaBairro buscaBairro = new BuscaBairro();
             ControllerBuscaBairro controllerBuscaBairro = new ControllerBuscaBairro(buscaBairro);
             

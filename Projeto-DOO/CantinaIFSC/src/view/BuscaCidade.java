@@ -82,6 +82,7 @@ public class BuscaCidade extends javax.swing.JFrame {
         bottompane = new javax.swing.JPanel();
         jButtonCarregar = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
         setResizable(false);
 
@@ -194,19 +195,12 @@ public class BuscaCidade extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "ID", "DESCRIÇÃO", "UF"
+                "ID", "NOME", "UF"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
-            };
             boolean[] canEdit = new boolean [] {
                 false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -217,7 +211,7 @@ public class BuscaCidade extends javax.swing.JFrame {
             jTable.getColumnModel().getColumn(0).setResizable(false);
             jTable.getColumnModel().getColumn(0).setPreferredWidth(40);
             jTable.getColumnModel().getColumn(1).setResizable(false);
-            jTable.getColumnModel().getColumn(1).setPreferredWidth(370);
+            jTable.getColumnModel().getColumn(1).setPreferredWidth(450);
             jTable.getColumnModel().getColumn(2).setResizable(false);
             jTable.getColumnModel().getColumn(2).setPreferredWidth(40);
         }

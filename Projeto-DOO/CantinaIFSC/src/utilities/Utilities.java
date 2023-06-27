@@ -35,14 +35,23 @@ public class Utilities {
         for (Component componente : componentes) {
 
             if (componente instanceof JTextField) {
+                
                 ((JTextField) componente).setText("");
+                
             } else if (componente instanceof JFormattedTextField) {
+                
                 ((JFormattedTextField) componente).setText("");
+                
             } else if(componente instanceof JComboBox){
+                
                 ((JComboBox) componente).setSelectedIndex(-1);
+                
             } else if (componente instanceof JTextArea){
+                
                 ((JTextArea)componente).setText("");
+                
             } else if (componente instanceof JRadioButton){
+                
                 ((JRadioButton) componente).setSelected(ativa);
             }
             componente.setEnabled(ativa);

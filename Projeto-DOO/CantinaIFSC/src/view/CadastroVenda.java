@@ -233,6 +233,7 @@ public class CadastroVenda extends javax.swing.JFrame {
         jTFID.setBackground(new java.awt.Color(229, 229, 229));
         jTFID.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         jTFID.setForeground(java.awt.Color.gray);
+        jTFID.setActionCommand("0");
         jTFID.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
 
         jButtonBuscar.setBackground(new java.awt.Color(229, 229, 229));

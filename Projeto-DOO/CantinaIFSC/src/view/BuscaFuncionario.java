@@ -80,6 +80,7 @@ public class BuscaFuncionario extends javax.swing.JFrame {
         bottompane = new javax.swing.JPanel();
         jButtonCarregar = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
         setResizable(false);
 
@@ -180,22 +181,15 @@ public class BuscaFuncionario extends javax.swing.JFrame {
         jTable.setForeground(java.awt.Color.gray);
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null}
             },
             new String [] {
-                "ID", "Nome", "CPF", "RG", "Fone 1", "Fone  2", "CEP", "Cidade", "Bairro", "Rua", "Complemento", "Usuário", "Status"
+                "ID", "CPF", "Nome"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Boolean.class
-            };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false, false, false
+                false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -204,22 +198,11 @@ public class BuscaFuncionario extends javax.swing.JFrame {
         jScrollPane.setViewportView(jTable);
         if (jTable.getColumnModel().getColumnCount() > 0) {
             jTable.getColumnModel().getColumn(0).setResizable(false);
-            jTable.getColumnModel().getColumn(0).setPreferredWidth(35);
+            jTable.getColumnModel().getColumn(0).setPreferredWidth(60);
             jTable.getColumnModel().getColumn(1).setResizable(false);
+            jTable.getColumnModel().getColumn(1).setPreferredWidth(150);
             jTable.getColumnModel().getColumn(2).setResizable(false);
-            jTable.getColumnModel().getColumn(3).setResizable(false);
-            jTable.getColumnModel().getColumn(4).setResizable(false);
-            jTable.getColumnModel().getColumn(4).setPreferredWidth(35);
-            jTable.getColumnModel().getColumn(5).setResizable(false);
-            jTable.getColumnModel().getColumn(5).setPreferredWidth(35);
-            jTable.getColumnModel().getColumn(6).setResizable(false);
-            jTable.getColumnModel().getColumn(7).setResizable(false);
-            jTable.getColumnModel().getColumn(8).setResizable(false);
-            jTable.getColumnModel().getColumn(9).setResizable(false);
-            jTable.getColumnModel().getColumn(10).setResizable(false);
-            jTable.getColumnModel().getColumn(11).setResizable(false);
-            jTable.getColumnModel().getColumn(12).setResizable(false);
-            jTable.getColumnModel().getColumn(12).setPreferredWidth(30);
+            jTable.getColumnModel().getColumn(2).setPreferredWidth(450);
         }
 
         javax.swing.GroupLayout jPanelDadosLayout = new javax.swing.GroupLayout(jPanelDados);

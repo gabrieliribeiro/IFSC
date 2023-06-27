@@ -103,6 +103,40 @@ public class CadastroEndereco extends javax.swing.JFrame {
     public void setjTFLogradouro(JTextField jTFLogradouro) {
         this.jTFLogradouro = jTFLogradouro;
     }
+
+    public JButton getjButtonAddBairro() {
+        return jButtonAddBairro;
+    }
+
+    public void setjButtonAddBairro(JButton jButtonAddBairro) {
+        this.jButtonAddBairro = jButtonAddBairro;
+    }
+
+    public JButton getjButtonAddCidade() {
+        return jButtonAddCidade;
+    }
+
+    public void setjButtonAddCidade(JButton jButtonAddCidade) {
+        this.jButtonAddCidade = jButtonAddCidade;
+    }
+
+    public JButton getjButtonBuscarBairro() {
+        return jButtonBuscarBairro;
+    }
+
+    public void setjButtonBuscarBairro(JButton jButtonBuscarBairro) {
+        this.jButtonBuscarBairro = jButtonBuscarBairro;
+    }
+
+    public JButton getjButtonBuscarCidade() {
+        return jButtonBuscarCidade;
+    }
+
+    public void setjButtonBuscarCidade(JButton jButtonBuscarCidade) {
+        this.jButtonBuscarCidade = jButtonBuscarCidade;
+    }
+    
+    
     
 
     /**
@@ -132,6 +166,10 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jTFBairro = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLIStatus = new javax.swing.JLabel();
+        jButtonBuscarCidade = new javax.swing.JButton();
+        jButtonAddCidade = new javax.swing.JButton();
+        jButtonBuscarBairro = new javax.swing.JButton();
+        jButtonAddBairro = new javax.swing.JButton();
         bottompane = new javax.swing.JPanel();
         jButtonNew = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
@@ -237,6 +275,11 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jTFCEP.setBackground(new java.awt.Color(229, 229, 229));
         jTFCEP.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         jTFCEP.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
+        jTFCEP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFCEPActionPerformed(evt);
+            }
+        });
 
         jLCidade.setBackground(new java.awt.Color(30, 30, 30));
         jLCidade.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
@@ -282,66 +325,144 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jLIStatus.setForeground(java.awt.Color.gray);
         jLIStatus.setText("Status");
 
+        jButtonBuscarCidade.setBackground(new java.awt.Color(229, 229, 229));
+        jButtonBuscarCidade.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        jButtonBuscarCidade.setForeground(java.awt.Color.gray);
+        jButtonBuscarCidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
+        jButtonBuscarCidade.setActionCommand("1");
+        jButtonBuscarCidade.setBorderPainted(false);
+        jButtonBuscarCidade.setHideActionText(true);
+        jButtonBuscarCidade.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButtonBuscarCidade.setIconTextGap(30);
+        jButtonBuscarCidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarCidadeActionPerformed(evt);
+            }
+        });
+
+        jButtonAddCidade.setBackground(new java.awt.Color(229, 229, 229));
+        jButtonAddCidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-soma-30.png"))); // NOI18N
+        jButtonAddCidade.setActionCommand("1");
+        jButtonAddCidade.setBorderPainted(false);
+        jButtonAddCidade.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonAddCidade.setIconTextGap(0);
+        jButtonAddCidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAddCidadeActionPerformed(evt);
+            }
+        });
+
+        jButtonBuscarBairro.setBackground(new java.awt.Color(229, 229, 229));
+        jButtonBuscarBairro.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
+        jButtonBuscarBairro.setForeground(java.awt.Color.gray);
+        jButtonBuscarBairro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-pesquisar-24.png"))); // NOI18N
+        jButtonBuscarBairro.setActionCommand("1");
+        jButtonBuscarBairro.setBorderPainted(false);
+        jButtonBuscarBairro.setHideActionText(true);
+        jButtonBuscarBairro.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButtonBuscarBairro.setIconTextGap(30);
+        jButtonBuscarBairro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarBairroActionPerformed(evt);
+            }
+        });
+
+        jButtonAddBairro.setBackground(new java.awt.Color(229, 229, 229));
+        jButtonAddBairro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/icones/icons8-soma-30.png"))); // NOI18N
+        jButtonAddBairro.setActionCommand("1");
+        jButtonAddBairro.setBorderPainted(false);
+        jButtonAddBairro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonAddBairro.setIconTextGap(0);
+        jButtonAddBairro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAddBairroActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout midpaneLayout = new javax.swing.GroupLayout(midpane);
         midpane.setLayout(midpaneLayout);
         midpaneLayout.setHorizontalGroup(
             midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(midpaneLayout.createSequentialGroup()
-                .addGap(97, 97, 97)
+                .addGap(155, 155, 155)
                 .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(midpaneLayout.createSequentialGroup()
-                        .addComponent(jLCEP)
-                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(328, 328, 328)
                         .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLId)
-                            .addComponent(jLLogradouro)
-                            .addComponent(jTFLogradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTFCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(43, 43, 43)
-                        .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTFCidade)
-                            .addComponent(jLCidade)
-                            .addComponent(jLBairro)
-                            .addComponent(jTFBairro)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
-                                .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLIStatus)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(113, 113, 113))))
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLIStatus)))
+                    .addComponent(jLId)
+                    .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(midpaneLayout.createSequentialGroup()
+                            .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLBairro)
+                                .addGroup(midpaneLayout.createSequentialGroup()
+                                    .addComponent(jTFBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonBuscarBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonAddBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(62, 62, 62)
+                            .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLCEP)
+                                .addComponent(jTFCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(midpaneLayout.createSequentialGroup()
+                            .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLLogradouro)
+                                .addComponent(jTFLogradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(49, 49, 49)
+                            .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLCidade)
+                                .addGroup(midpaneLayout.createSequentialGroup()
+                                    .addComponent(jTFCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jButtonBuscarCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jButtonAddCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         midpaneLayout.setVerticalGroup(
             midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
+            .addGroup(midpaneLayout.createSequentialGroup()
+                .addGap(83, 83, 83)
                 .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLId)
-                    .addComponent(jLIStatus))
+                    .addComponent(jLIStatus)
+                    .addComponent(jLId))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLCEP)
-                    .addComponent(jLCidade))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLLogradouro)
-                    .addComponent(jLBairro))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFLogradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTFBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(159, 159, 159))
+                    .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(midpaneLayout.createSequentialGroup()
+                        .addComponent(jLLogradouro)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTFLogradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(midpaneLayout.createSequentialGroup()
+                        .addComponent(jLCidade)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTFCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonBuscarCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonAddCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(midpaneLayout.createSequentialGroup()
+                        .addComponent(jLBairro)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTFBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButtonBuscarBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonAddBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(midpaneLayout.createSequentialGroup()
+                        .addComponent(jLCEP)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTFCEP, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
         bottompane.setBackground(new java.awt.Color(255, 255, 255));
@@ -424,19 +545,22 @@ public class CadastroEndereco extends javax.swing.JFrame {
         jBG.setLayout(jBGLayout);
         jBGLayout.setHorizontalGroup(
             jBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(toppane4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(toppane4, javax.swing.GroupLayout.DEFAULT_SIZE, 1042, Short.MAX_VALUE)
             .addGroup(jBGLayout.createSequentialGroup()
                 .addComponent(bottompane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(midpane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jBGLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(midpane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jBGLayout.setVerticalGroup(
             jBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jBGLayout.createSequentialGroup()
                 .addComponent(toppane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(41, 41, 41)
                 .addComponent(midpane, javax.swing.GroupLayout.PREFERRED_SIZE, 459, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(bottompane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -484,6 +608,26 @@ public class CadastroEndereco extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFIDActionPerformed
 
+    private void jTFCEPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFCEPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFCEPActionPerformed
+
+    private void jButtonBuscarCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarCidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonBuscarCidadeActionPerformed
+
+    private void jButtonAddCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddCidadeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAddCidadeActionPerformed
+
+    private void jButtonBuscarBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarBairroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonBuscarBairroActionPerformed
+
+    private void jButtonAddBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddBairroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAddBairroActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -526,7 +670,11 @@ public class CadastroEndereco extends javax.swing.JFrame {
     private javax.swing.JPanel bottompane;
     private javax.swing.JButton jBExit4;
     private javax.swing.JPanel jBG;
+    private javax.swing.JButton jButtonAddBairro;
+    private javax.swing.JButton jButtonAddCidade;
     private javax.swing.JButton jButtonBuscar;
+    private javax.swing.JButton jButtonBuscarBairro;
+    private javax.swing.JButton jButtonBuscarCidade;
     private javax.swing.JButton jButtonCancel;
     private javax.swing.JButton jButtonNew;
     private javax.swing.JButton jButtonSave;

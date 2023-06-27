@@ -24,6 +24,9 @@ public class Endereco {
         this.bairro = bairro;
         this.cidade = cidade;
     }
+    
+     public Endereco() {
+    }
    
     public int getId() {
         return id;

@@ -75,6 +75,7 @@ public class BuscaCliente extends javax.swing.JFrame {
         bottompane = new javax.swing.JPanel();
         jButtonCarregar = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
         setResizable(false);
 
@@ -175,14 +176,14 @@ public class BuscaCliente extends javax.swing.JFrame {
         jTable.setForeground(java.awt.Color.gray);
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null}
             },
             new String [] {
-                "ID", "Nome", "CPF", "RG", "Aniverário", "Fone 1", "Fone 2", "CEP", "Cidade", "Bairro", "Rua", "Complemento", "Status"
+                "ID", "CPF", "Nome", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                true, true, false, false, false, false, false, false, false, false, false, true, true
+                true, false, true, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -192,30 +193,13 @@ public class BuscaCliente extends javax.swing.JFrame {
         jScrollPane.setViewportView(jTable);
         if (jTable.getColumnModel().getColumnCount() > 0) {
             jTable.getColumnModel().getColumn(0).setResizable(false);
-            jTable.getColumnModel().getColumn(0).setPreferredWidth(20);
+            jTable.getColumnModel().getColumn(0).setPreferredWidth(80);
             jTable.getColumnModel().getColumn(1).setResizable(false);
-            jTable.getColumnModel().getColumn(1).setPreferredWidth(60);
+            jTable.getColumnModel().getColumn(1).setPreferredWidth(200);
             jTable.getColumnModel().getColumn(2).setResizable(false);
-            jTable.getColumnModel().getColumn(2).setPreferredWidth(40);
+            jTable.getColumnModel().getColumn(2).setPreferredWidth(400);
             jTable.getColumnModel().getColumn(3).setResizable(false);
-            jTable.getColumnModel().getColumn(3).setPreferredWidth(30);
-            jTable.getColumnModel().getColumn(4).setResizable(false);
-            jTable.getColumnModel().getColumn(4).setPreferredWidth(20);
-            jTable.getColumnModel().getColumn(5).setResizable(false);
-            jTable.getColumnModel().getColumn(5).setPreferredWidth(30);
-            jTable.getColumnModel().getColumn(6).setResizable(false);
-            jTable.getColumnModel().getColumn(6).setPreferredWidth(30);
-            jTable.getColumnModel().getColumn(7).setResizable(false);
-            jTable.getColumnModel().getColumn(7).setPreferredWidth(20);
-            jTable.getColumnModel().getColumn(8).setResizable(false);
-            jTable.getColumnModel().getColumn(8).setPreferredWidth(40);
-            jTable.getColumnModel().getColumn(9).setResizable(false);
-            jTable.getColumnModel().getColumn(9).setPreferredWidth(40);
-            jTable.getColumnModel().getColumn(10).setResizable(false);
-            jTable.getColumnModel().getColumn(10).setPreferredWidth(50);
-            jTable.getColumnModel().getColumn(11).setResizable(false);
-            jTable.getColumnModel().getColumn(12).setResizable(false);
-            jTable.getColumnModel().getColumn(12).setPreferredWidth(20);
+            jTable.getColumnModel().getColumn(3).setPreferredWidth(90);
         }
 
         javax.swing.GroupLayout jPanelDadosLayout = new javax.swing.GroupLayout(jPanelDados);

@@ -97,7 +97,7 @@ public class CadastroBairro extends javax.swing.JFrame {
         jButtonSave = new javax.swing.JButton();
         jButtonCancel = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setAlwaysOnTop(true);
         setResizable(false);
 
@@ -158,7 +158,16 @@ public class CadastroBairro extends javax.swing.JFrame {
         jTFId.setBackground(new java.awt.Color(229, 229, 229));
         jTFId.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         jTFId.setForeground(java.awt.Color.gray);
+        jTFId.setActionCommand("0");
         jTFId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
+        jTFId.setMaximumSize(new java.awt.Dimension(70, 44));
+        jTFId.setMinimumSize(new java.awt.Dimension(70, 44));
+        jTFId.setPreferredSize(new java.awt.Dimension(70, 44));
+        jTFId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFIdActionPerformed(evt);
+            }
+        });
 
         jButtonBuscar.setBackground(new java.awt.Color(229, 229, 229));
         jButtonBuscar.setFont(new java.awt.Font("Arial Narrow", 0, 20)); // NOI18N
@@ -170,6 +179,9 @@ public class CadastroBairro extends javax.swing.JFrame {
         jButtonBuscar.setHideActionText(true);
         jButtonBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jButtonBuscar.setIconTextGap(30);
+        jButtonBuscar.setMaximumSize(new java.awt.Dimension(134, 44));
+        jButtonBuscar.setMinimumSize(new java.awt.Dimension(134, 44));
+        jButtonBuscar.setPreferredSize(new java.awt.Dimension(134, 44));
         jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBuscarActionPerformed(evt);
@@ -185,6 +197,9 @@ public class CadastroBairro extends javax.swing.JFrame {
         jTFDescricao.setFont(new java.awt.Font("Arial", 0, 20)); // NOI18N
         jTFDescricao.setForeground(java.awt.Color.gray);
         jTFDescricao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 0, true));
+        jTFDescricao.setMaximumSize(new java.awt.Dimension(850, 44));
+        jTFDescricao.setMinimumSize(new java.awt.Dimension(850, 44));
+        jTFDescricao.setPreferredSize(new java.awt.Dimension(850, 44));
         jTFDescricao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTFDescricaoActionPerformed(evt);
@@ -199,13 +214,13 @@ public class CadastroBairro extends javax.swing.JFrame {
                 .addGap(63, 63, 63)
                 .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLId)
-                    .addComponent(jTFDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(midpaneLayout.createSequentialGroup()
                         .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTFId, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLDescricao, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTFDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(117, Short.MAX_VALUE))
         );
         midpaneLayout.setVerticalGroup(
@@ -213,11 +228,11 @@ public class CadastroBairro extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, midpaneLayout.createSequentialGroup()
                 .addGap(90, 90, 90)
                 .addComponent(jLId)
-                .addGap(13, 13, 13)
-                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFId, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTFId, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addComponent(jLDescricao)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTFDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -358,6 +373,10 @@ public class CadastroBairro extends javax.swing.JFrame {
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonCancelActionPerformed
+
+    private void jTFIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFIdActionPerformed
 
     /**
      * @param args the command line arguments
