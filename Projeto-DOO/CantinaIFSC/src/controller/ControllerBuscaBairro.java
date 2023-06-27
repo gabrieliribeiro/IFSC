@@ -36,20 +36,14 @@ public class ControllerBuscaBairro implements ActionListener{
             DAO.ClasseDados.getInstance();
             
             DefaultTableModel tabela = (DefaultTableModel) this.buscaBairro.getjTable().getModel();
-            for (Bairro bairroAtual : DAO.ClasseDados.listaBairro) {
-                tabela.addRow(new Object[]{bairroAtual.getId(),
-                                  bairroAtual.getDescricao() });
+             for (Bairro bairroAtual : DAO.ClasseDados.listaBairro) {
+                tabela.addRow(new Object[]{bairroAtual.getId(),bairroAtual.getDescricao()});
             }
             
         }else if(e.getSource()==this.buscaBairro.getjButtonCarregar()){ 
-            
-            
-            
-            //controller.EnderecoRegistroController.codigoBairro = (int) this.bairroPesquisa.getTabelaDados().getValueAt(this.bairroPesquisa.getTabelaDados().getSelectedRow(), 0);
-            //controller.BairroRegistroController.codigo = (int) this.bairroPesquisa.getTabelaDados().getValueAt(this.bairroPesquisa.getTabelaDados().getSelectedRow(), 0);
-
-            //this.bairroPesquisa.dispose();
-            
+            controller.ControllerCadastroBairro.codigo = (int) this.buscaBairro.getjTable().getValueAt(this.buscaBairro.getjTable().getSelectedRow(), 0);
+            this.buscaBairro.dispose();
+ 
         }else if (e.getSource()==this.buscaBairro.getJButtonExit()) {
             this.buscaBairro.dispose();
         }

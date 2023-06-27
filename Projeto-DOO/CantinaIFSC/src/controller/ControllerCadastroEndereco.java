@@ -12,7 +12,11 @@ import java.awt.event.WindowListener;
 import model.bo.Bairro;
 import model.bo.Cidade;
 import model.bo.Endereco;
+import view.BuscaBairro;
+import view.BuscaCidade;
 import view.BuscaEndereco;
+import view.CadastroBairro;
+import view.CadastroCidade;
 import view.CadastroEndereco;
 
 
@@ -125,6 +129,32 @@ public class ControllerCadastroEndereco implements ActionListener{
             //Inserir o controller da busca de bairros
             buscaEndereco.setVisible(true);
 
+        }else if (e.getSource() == this.cadastroEndereco.getjButtonAddBairro()) {
+            CadastroBairro cadastroBairro = new CadastroBairro();
+            ControllerCadastroBairro controllerCadastroBairro = new ControllerCadastroBairro(cadastroBairro);
+            cadastroBairro.setVisible(true);
+
+            
+        } else if (e.getSource() == this.cadastroEndereco.getjButtonBuscarBairro()) {
+            codigoBairro=0;
+            BuscaBairro buscaBairro = new BuscaBairro();
+            ControllerBuscaBairro controllerBuscaBairro = new ControllerBuscaBairro(buscaBairro);
+            buscaBairro.addWindowListener(disposeListenerBairro);
+            buscaBairro.setVisible(true);
+
+            
+        } else if (e.getSource() == this.cadastroEndereco.getjButtonAddCidade()) {
+            CadastroCidade cadastroCidade = new CadastroCidade();
+            ControllerCadastroCidade controllerCadastroCidade = new ControllerCadastroCidade(cadastroCidade);
+            cadastroCidade.setVisible(true);
+
+            
+        } else if (e.getSource() == this.cadastroEndereco.getjButtonBuscarCidade()) {
+            codigoCidade=0;
+            BuscaCidade buscaCidade = new BuscaCidade();
+            ControllerBuscaCidade controllerBuscaCidade = new ControllerBuscaCidade(buscaCidade);
+            buscaCidade.addWindowListener(disposeListenerCidade);
+            buscaCidade.setVisible(true);
         }
     }
     
