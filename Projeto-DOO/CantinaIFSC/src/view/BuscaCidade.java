@@ -6,6 +6,7 @@ package view;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
@@ -20,6 +21,14 @@ public class BuscaCidade extends javax.swing.JFrame {
         initComponents();
     }
 
+    public JTable getjTable() {
+        return jTable;
+    }
+
+    public void setjTable(JTable jTable) {
+        this.jTable = jTable;
+    }
+    
     public JButton getJButtonExit() {
         return JButtonExit;
     }
@@ -192,10 +201,10 @@ public class BuscaCidade extends javax.swing.JFrame {
         jTable.setForeground(java.awt.Color.gray);
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null}
+
             },
             new String [] {
-                "ID", "NOME", "UF"
+                "ID", "Descrição", "UF"
             }
         ) {
             boolean[] canEdit = new boolean [] {

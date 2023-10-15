@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -6,15 +6,17 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
+import model.bo.Carteirinha;
 import view.BuscaCarteirinha;
 
 /**
  *
  * @author gabri
  */
-public class ControllerBuscaCarteirinha  implements ActionListener{
-        
-    BuscaCarteirinha buscaCarteirinha;
+public class ControllerBuscaCarteirinha implements ActionListener {
+    
+    private BuscaCarteirinha buscaCarteirinha;
 
     public ControllerBuscaCarteirinha(BuscaCarteirinha buscaCarteirinha) {
         this.buscaCarteirinha = buscaCarteirinha;
@@ -30,13 +32,24 @@ public class ControllerBuscaCarteirinha  implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == this.buscaCarteirinha.getjButtonFiltrar()){
-        
-        }else if(e.getSource() == this.buscaCarteirinha.getjButtonCarregar()){
-        
-        }else if(e.getSource() == this.buscaCarteirinha.getJButtonExit()){
+        if (e.getSource() == this.buscaCarteirinha.getjButtonFiltrar()) {
+            DAO.ClasseDados.getInstance();
+
+            DefaultTableModel tabela = (DefaultTableModel) this.buscaCarteirinha.getjTable().getModel();
+            tabela.setRowCount(0);
+
+            for (Carteirinha carteirinhaAtual : DAO.ClasseDados.listaCarteirinhas) {
+                tabela.addRow(new Object[]{carteirinhaAtual.getId(), carteirinhaAtual.getCliente().getCpf(), carteirinhaAtual.getCliente().getNome()});
+            }
+        } else if (e.getSource() == this.buscaCarteirinha.getjButtonCarregar()) {
+            int selectedRow = this.buscaCarteirinha.getjTable().getSelectedRow();
+            if (selectedRow != -1) {
+                int codigo = (int) this.buscaCarteirinha.getjTable().getValueAt(selectedRow, 0);
+                controller.ControllerCadastroCarteirinha.codigo = codigo;
+                this.buscaCarteirinha.dispose();
+            }
+        } else if (e.getSource() == this.buscaCarteirinha.getJButtonExit()) {
             this.buscaCarteirinha.dispose();
-            
         }
     }
 }

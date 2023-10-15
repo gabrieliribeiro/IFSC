@@ -6,6 +6,8 @@ package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
+import model.bo.Cliente;
 import view.BuscaCliente;
 
 /**
@@ -14,6 +16,7 @@ import view.BuscaCliente;
  */
 public class ControllerBuscaCliente  implements  ActionListener{
     BuscaCliente buscaCliente;
+    String quemChama;
     
      public ControllerBuscaCliente(BuscaCliente buscaCliente) {
         this.buscaCliente = buscaCliente;
@@ -21,19 +24,36 @@ public class ControllerBuscaCliente  implements  ActionListener{
         this.buscaCliente.getjButtonFiltrar().addActionListener(this);
         this.buscaCliente.getjButtonCarregar().addActionListener(this);
         this.buscaCliente.getJButtonExit().addActionListener(this);
+        
 
 
     }
 
-    @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.buscaCliente.getjButtonFiltrar()) {
+            DAO.ClasseDados.getInstance();
+
+            DefaultTableModel tabela = (DefaultTableModel) this.buscaCliente.getjTable().getModel();
+            tabela.setRowCount(0); // Clear the existing table rows
+
+            for (Cliente clienteAtual : DAO.ClasseDados.listaCliente) {
+                tabela.addRow(new Object[]{clienteAtual.getId(), clienteAtual.getCpf(), clienteAtual.getNome(),clienteAtual.getStatus()});
+            }
             
-        }else if (e.getSource() ==  this.buscaCliente.getjButtonCarregar()) {
-            
-        }else if (e .getSource() == this. buscaCliente.getJButtonExit()) {
+        } else if (e.getSource() == this.buscaCliente.getjButtonCarregar()) {
+            int selectedRow = this.buscaCliente.getjTable().getSelectedRow();
+            if (selectedRow != -1) {
+                int codigo = (int) this.buscaCliente.getjTable().getValueAt(selectedRow, 0);
+                
+                if(quemChama == "carteirinha"){
+                controller.ControllerCadastroCarteirinha.codigoCliente = codigo;
+                }else if (quemChama=="cliente"){
+                
+            }
+                this.buscaCliente.dispose();
+            }
+        } else if (e.getSource() == this.buscaCliente.getJButtonExit()) {
             this.buscaCliente.dispose();
         }
     }
-            
 }

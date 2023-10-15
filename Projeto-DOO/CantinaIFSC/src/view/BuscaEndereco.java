@@ -6,6 +6,7 @@ package view;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
@@ -19,6 +20,14 @@ public class BuscaEndereco extends javax.swing.JDialog {
      */
     public BuscaEndereco(){
         initComponents();
+    }
+
+    public JTable getjTable() {
+        return jTable;
+    }
+
+    public void setjTable(JTable jTable) {
+        this.jTable = jTable;
     }
     
      public JButton getJButtonExit() {
@@ -176,7 +185,7 @@ public class BuscaEndereco extends javax.swing.JDialog {
         jTable.setForeground(java.awt.Color.gray);
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "ID", "Logradouro", "Bairro", "Cidade", "CEP"

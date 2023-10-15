@@ -6,6 +6,7 @@ package view;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
@@ -58,6 +59,16 @@ public class BuscaCarteirinha extends javax.swing.JFrame {
     public void setjTFFiltrar(JTextField jTFFiltrar) {
         this.jTFFiltrar = jTFFiltrar;
     }
+
+    public JTable getjTable() {
+        return jTable;
+    }
+
+    public void setjTable(JTable jTable) {
+        this.jTable = jTable;
+    }
+    
+    
     
 
     /**

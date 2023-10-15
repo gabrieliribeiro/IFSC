@@ -15,6 +15,7 @@ import view.CadastroFornecedor;
 public class ControllerCadastroFornecedor implements ActionListener {
     
     CadastroFornecedor cadastroFornecedor;
+    public static int codigo, codigoEndereco, idEndereco;
 
     public ControllerCadastroFornecedor(CadastroFornecedor cadastroFornecedor) {
         this.cadastroFornecedor = cadastroFornecedor;

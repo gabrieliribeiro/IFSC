@@ -150,7 +150,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         jButtonCancel = new javax.swing.JButton();
         jButtonExclui = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Fomulário de Teste da GABISZOKA");
         setAlwaysOnTop(true);
         setMaximumSize(new java.awt.Dimension(1280, 832));

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="shortcut icon" href="../coffee-beans.png">
+    <title>Coffee Palace</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <script src="https://kit.fontawesome.com/6253937006.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-head">
+        <h1>Coffee Palace</h1>
+    </div>
+
+    <section class="imagem" id="img01">
+
+        <p>
+            O café é uma bebida global originada na Etiópia. Sua evolução uniu culturas e oferece uma variedade de
+            sabores, da fruta às especiarias, graças à torrefação. Com cafeterias modernas e métodos criativos, o café
+            se tornou um ritual sensorial. Além do prazer, estudos sugerem benefícios à saúde com consumo moderado. Em
+            resumo, o café é uma experiência culturalmente rica e sensorialmente gratificante.
+        </p>
+    </section>
+
+    <div>
+        <div class="menu">
+            <h2>Menu de Café</h2>
+        </div>
+
+        <div class="cafe-carousel">
+            <div class="cafe-item">
+                <img src="imgs/download (1).jpg" alt="Café 1">
+                <h2>Café Especial</h2>
+                <p>Ingredientes: Café torrado, água quente.</p>
+            </div>
+
+            <div class="cafe-item">
+                <img src="imgs/Чашка кофе.jpg" alt="Café 2">
+                <h2>Café com Leite</h2>
+                <p>Ingredientes: Café torrado, leite vaporizado.</p>
+            </div>
+
+            <div class="cafe-item">
+                <img src="imgs/download.jpg" alt="Café 3">
+                <h2>Café Gelado</h2>
+                <p>Ingredientes: Café torrado, gelo, leite, açúcar.</p>
+            </div>
+        </div>
+
+        <div id="popup" class="popup">
+            <button id="fechar"
+                style="position: absolute; top: 10px; right: 10px; background: none; border: none; cursor: pointer;">
+                <i class="fa-solid fa-circle-xmark fa-lg" style="color: #8c2f0d;"></i>
+            </button>
+            <p>Quantidade a ser adicionada ao pedido</p>
+            <div>
+                <label for="quantidade">Quantidade:</label>
+                <input type="number" id="quantidade" value="1" min="1">
+            </div>
+            <button id="adicionar">Adicionar ao Carrinho <i class="fa-solid fa-cart-plus fa-lg" style="color: #ffffff;"></i></button>
+        </div>
+
+        <!-- Adicione mais itens de café aqui -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    const cafeItens = document.querySelectorAll('.cafe-item');
+    const popup = document.getElementById('popup');
+    const fechar = document.getElementById('fechar');
+    const adicionar = document.getElementById('adicionar');
+    const imagem = document.getElementById('imagem');
+    const body = document.body;
+
+    cafeItens.forEach(item => {
+      const imagemCafe = item.querySelector('img');
+      imagemCafe.addEventListener('click', () => {
+        popup.style.display = 'block';
+        body.classList.add('popup-open');
+      });
+    });
+
+    fechar.addEventListener('click', () => {
+      popup.style.display = 'none';
+      body.classList.remove('popup-open');
+    });
+
+    adicionar.addEventListener('click', () => {
+      popup.style.display = 'none';
+      body.classList.remove('popup-open');
+    });
+
+    $(document).ready(function () {
+      $('.cafe-carousel').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        focusOnSelect: true,
+        arrows: true
+      });
+    });
+  </script>
+</body>
+
+</html>

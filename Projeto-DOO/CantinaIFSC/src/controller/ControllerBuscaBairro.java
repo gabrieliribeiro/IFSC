@@ -32,13 +32,16 @@ public class ControllerBuscaBairro implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==this.buscaBairro.getjButtonFiltrar()) {
+        if (e.getSource() == this.buscaBairro.getjButtonFiltrar()) {
             DAO.ClasseDados.getInstance();
-            
+
             DefaultTableModel tabela = (DefaultTableModel) this.buscaBairro.getjTable().getModel();
-             for (Bairro bairroAtual : DAO.ClasseDados.listaBairro) {
-                tabela.addRow(new Object[]{bairroAtual.getId(),bairroAtual.getDescricao()});
+            if (tabela.getRowCount() == 0) {
+                for (Bairro bairroAtual : DAO.ClasseDados.listaBairro) {
+                    tabela.addRow(new Object[]{bairroAtual.getId(), bairroAtual.getDescricao()});
+                }
             }
+             
             
         }else if(e.getSource()==this.buscaBairro.getjButtonCarregar()){ 
             controller.ControllerCadastroBairro.codigo = (int) this.buscaBairro.getjTable().getValueAt(this.buscaBairro.getjTable().getSelectedRow(), 0);

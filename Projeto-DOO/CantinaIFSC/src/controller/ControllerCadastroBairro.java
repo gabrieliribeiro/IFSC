@@ -76,11 +76,16 @@ public class ControllerCadastroBairro implements ActionListener {
             
             bairro.setId(DAO.ClasseDados.listaBairro.size()+1);
             bairro.setDescricao(this.cadastroBairro.getjTFDescricao().getText());
-            DAO.ClasseDados.listaBairro.add(bairro);
+            if (this.cadastroBairro.getjTFId().getText().equalsIgnoreCase("")) {
+                DAO.ClasseDados.listaBairro.add(bairro);
+            }else{
+                int index = Integer.parseInt( this.cadastroBairro.getjTFId().getText())-1;
+                DAO.ClasseDados.listaBairro.get(index).setDescricao(bairro.getDescricao());
+            }
             
-            utilities.Utilities.ativa(true, cadastroBairro.getMidpane());
+          utilities.Utilities.ativa(true, this.cadastroBairro.getBottompane());
             utilities.Utilities.ativa(true, this.cadastroBairro.getMidpane());
-            utilities.Utilities.limpaComponentes(false, cadastroBairro.getMidpane());
+            utilities.Utilities.limpaComponentes(false, this.cadastroBairro.getMidpane());
             
             //Fazer tela de retorno para usuario
             

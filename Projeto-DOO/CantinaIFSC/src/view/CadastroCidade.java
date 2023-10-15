@@ -21,7 +21,10 @@ public class CadastroCidade extends javax.swing.JFrame {
     public CadastroCidade() {
         initComponents();
     }
-
+    
+    
+    
+    
     public JButton getJButtonExit() {
         return JButtonExit;
     }

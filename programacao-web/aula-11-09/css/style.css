@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Coffee";
+  src: url("../font/coffee+teademo-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --cor1: #d9843b;
+  --cor2: #bf5315;
+  --cor3: #a67051;
+  --cor4: #8c2f0d;
+  --cor5: #40211a;
+  --cor6: #fec594;
+  --cor7: #fff;
+
+  --fonte-padrao: "Quicksand", sans-serif;
+  --fonte-cafe: "Coffee", cursive;
+}
+
+.navbar-custom {
+    background-image: linear-gradient(to bottom, var(--cor5), var(--cor4));
+    padding: 24px;
+    box-shadow: 6px 6px 13px 0px rgba(0, 0, 0, 0.445);
+}
+
+.navbar-custom .navbar-brand, .navbar-custom .navbar-toggler-icon {
+    color: #fff;
+}
+
+.navbar-custom .navbar-toggler {
+    border: none;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #aaa;
+}
+
+/* Estilos para o menu do hambúrguer */
+.navbar-custom .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-custom .navbar-collapse ul {
+    text-align: right;
+}
+
+/* Adicionando estilos personalizados */
+.mb-4-card {
+    margin-top: 20px; /* Espaçamento do topo */
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 3.2rem);
+}
+
+.modal-content {
+    border: 3px solid #8c2f0d;
+    border-radius: 10px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.btn-primary {
+    background-color: var(--cor2) !important;
+    border-color: var(--cor2) !important;
+}
+
+/* Define a cor do texto para branco */
+.btn-primary {
+    color: #ffffff !important;
+}
+
+/* Pseudo-classe hover para efeito visual quando o mouse passa sobre o botão */
+.btn-primary:hover {
+    background-color: #8c2f0d !important; /* Cor mais escura para o efeito hover */
+}
+

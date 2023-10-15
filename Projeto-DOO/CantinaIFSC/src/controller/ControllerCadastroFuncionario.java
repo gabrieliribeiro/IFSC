@@ -18,6 +18,7 @@ import view.CadastroFuncionario;
 public class ControllerCadastroFuncionario implements ActionListener {
 
     CadastroFuncionario cadastroFuncionario;
+    public static int codigo, codigoEndereco, idEndereco, idSenha, condicao, condicaoCadastro;
 
     public ControllerCadastroFuncionario(CadastroFuncionario cadastroFuncionario) {
         this.cadastroFuncionario = cadastroFuncionario;

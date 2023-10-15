@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Coffee Palace</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-custom">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="imgs/Black and Orange Vintage Coffee Shop Logo (2).png">
+        Coffee Palace
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Página Inicial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page02.html">Cardápio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page03.html">Sobre nós</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4 mb-4-card"> <!-- Adicione a classe "mb-4-card" para espaçamento do topo -->
+        <div class="card" style="width: 18rem;">
+          <img src="fotos-cafe/Coffee Enema Explained (Recipe Included) - CoffeeSesh.jpeg" class="card-img-top"
+            alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café Especial</h5>
+            <p class="card-text">Ingredientes: Um delicioso cappuccino em uma casquinha com borda de chocolate.</p>
+            <a href="#" class="btn btn-primary btn-comprar" data-toggle="modal" data-target="#popup">Adicionar ao
+              carrinho</a>
+            <!-- Adicione a classe "btn-comprar" para identificar o botão -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Repita este bloco de código para outros itens do cardápio -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-4-card">
+        <div class="card" style="width: 18rem;">
+          <img src="fotos-cafe/something special ♡.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Wafles com Sorvete</h5>
+            <p class="card-text">Ingredientes: Wafles de primeira qualidade com um delicioso sorvete de baunilha.</p>
+            <a href="#" class="btn btn-primary btn-comprar" data-toggle="modal" data-target="#popup">Adicionar ao
+              carrinho</a>
+          </div>
+        </div>
+      </div>
+      <!-- Fim da repetição para outros itens -->
+
+      <!-- Repita este bloco de código para outros itens do cardápio -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-4-card">
+        <div class="card" style="width: 18rem;">
+          <img src="fotos-cafe/52aeb635-9366-4069-aa39-5f604bc82332.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cake Mix</h5>
+            <p class="card-text">Ingredientes: Bolos de morango, chocolate e cereja.</p>
+            <a href="#" class="btn btn-primary btn-comprar" data-toggle="modal" data-target="#popup">Adicionar ao
+              carrinho</a>
+          </div>
+        </div>
+      </div>
+      <!-- Fim da repetição para outros itens -->
+
+      <!-- Repita este bloco de código para outros itens do cardápio -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-4-card">
+        <div class="card" style="width: 18rem;">
+          <img src="fotos-cafe/download.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café Gelado</h5>
+            <p class="card-text">Ingredientes: Café torrado, gelo, leite, açúcar.</p>
+            <a href="#" class="btn btn-primary btn-comprar" data-toggle="modal" data-target="#popup">Adicionar ao
+              carrinho</a>
+          </div>
+        </div>
+      </div>
+      <!-- Fim da repetição para outros itens -->
+
+      <!-- Repita este bloco de código para outros itens do cardápio -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-4-card">
+        <div class="card" style="width: 18rem;">
+          <img src="fotos-cafe/cafezin.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café com Leite</h5>
+            <p class="card-text">Ingredientes: Café torrado, leite vaporizado.</p>
+            <a href="#" class="btn btn-primary btn-comprar" data-toggle="modal" data-target="#popup">Adicionar ao
+              carrinho</a>
+          </div>
+        </div>
+      </div>
+      <!-- Fim da repetição para outros itens -->
+
+      <!-- Repita este bloco de código para outros itens do cardápio -->
+      <div class="col-lg-4 col-md-6 mb-4 mb-4-card">
+        <div class="card" style="width: 18rem;">
+          <img src="fotos-cafe/Get the We Heart It app!.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Mix Coffee and Cakes</h5>
+            <p class="card-text">Ingredientes: Três (3) Cappuccinos deliciosos e bolos da nossa vitrine.</p>
+            <a href="#" class="btn btn-primary btn-comprar" data-toggle="modal" data-target="#popup">Adicionar ao
+              carrinho</a>
+          </div>
+        </div>
+      </div>
+      <!-- Fim da repetição para outros itens -->
+
+
+
+    </div>
+  </div>
+
+  <!-- Pop-up centralizado (Bootstrap Modal) -->
+  <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="popupLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="popupLabel">Quantidade a ser adicionada ao pedido</h5>
+        </div>
+        <div class="modal-body">
+          <div>
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" value="1" min="1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary" id="btn-confirmar">Confirmar <i
+              class="fa-solid fa-cart-plus fa-lg" style="color: #ffffff;"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    const cafeItens = document.querySelectorAll('.mb-4-card');
+    const popup = document.getElementById('popup');
+    const fechar = document.getElementById('fechar');
+    const adicionar = document.getElementById('btn-confirmar');
+    const body = document.body;
+
+    cafeItens.forEach(item => {
+      const btnComprar = item.querySelector('.btn-comprar');
+      btnComprar.addEventListener('click', () => {
+        popup.style.display = 'block';
+        body.classList.add('popup-open');
+      });
+    });
+
+    fechar.addEventListener('click', () => {
+      popup.style.display = 'none';
+      body.classList.remove('popup-open');
+    });
+
+    adicionar.addEventListener('click', () => {
+      popup.style.display = 'none';
+      body.classList.remove('popup-open');
+    });
+  </script>
+</body>
+
+</html>

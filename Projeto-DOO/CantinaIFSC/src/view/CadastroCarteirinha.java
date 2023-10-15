@@ -41,58 +41,6 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
     public JButton getjButtonBuscar() {
         return jButtonBuscar;
     }
-    
-
-    
-    public JButton getjButtonAdicionarCPF() {
-        return jButtonAddCPF;
-    }
-
-    public JButton getjButtonPesquisarCPF() {
-        return jButtonBuscarCPF;
-    }
-
-
-    public JFormattedTextField getjFormattedTextFieldCPF() {
-        return jFTFCPF;
-    }
-
-    public void setjFormattedTextFieldCPF(JFormattedTextField jFormattedTextFieldCPF) {
-        this.jFTFCPF = jFormattedTextFieldCPF;
-    }
-
-    public JFormattedTextField getjFormattedTextFieldDataCancelamento() {
-        return jFTFDataCancelamento;
-    }
-
-    public void setjFormattedTextFieldDataCancelamento(JFormattedTextField jFormattedTextFieldDataCancelamento) {
-        this.jFTFDataCancelamento = jFormattedTextFieldDataCancelamento;
-    }
-
-    public JFormattedTextField getjFormattedTextFieldDataGeracao() {
-        return jFTFDataGeracao;
-    }
-
-    public void setjFormattedTextFieldDataGeracao(JFormattedTextField jFormattedTextFieldDataGeracao) {
-        this.jFTFDataGeracao = jFormattedTextFieldDataGeracao;
-    }
-
-    public JTextField getjTextFieldCodBarra() {
-        return jTFCodBarra;
-    }
-
-    public void setjTextFieldCodBarra(JTextField jTextFieldCodBarra) {
-        this.jTFCodBarra = jTextFieldCodBarra;
-    }
-
-    public JTextField getjTextFieldID() {
-        return jTFID;
-    }
-
-    public void setjTextFieldID(JTextField jTextFieldID) {
-        this.jTFID = jTextFieldID;
-    }
-
     public JPanel getBottompane() {
         return bottompane;
     }
@@ -105,6 +53,71 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         return toppane;
     }
 
+    public JButton getjButtonAddCPF() {
+        return jButtonAddCPF;
+    }
+
+    public void setjButtonAddCPF(JButton jButtonAddCPF) {
+        this.jButtonAddCPF = jButtonAddCPF;
+    }
+
+    public JButton getjButtonBuscarCPF() {
+        return jButtonBuscarCPF;
+    }
+
+    public void setjButtonBuscarCPF(JButton jButtonBuscarCPF) {
+        this.jButtonBuscarCPF = jButtonBuscarCPF;
+    }
+
+    public JFormattedTextField getjFTFCPF() {
+        return jFTFCPF;
+    }
+
+    public void setjFTFCPF(JFormattedTextField jFTFCPF) {
+        this.jFTFCPF = jFTFCPF;
+    }
+
+    public JFormattedTextField getjFTFDataCancelamento() {
+        return jFTFDataCancelamento;
+    }
+
+    public void setjFTFDataCancelamento(JFormattedTextField jFTFDataCancelamento) {
+        this.jFTFDataCancelamento = jFTFDataCancelamento;
+    }
+
+    public JFormattedTextField getjFTFDataGeracao() {
+        return jFTFDataGeracao;
+    }
+
+    public void setjFTFDataGeracao(JFormattedTextField jFTFDataGeracao) {
+        this.jFTFDataGeracao = jFTFDataGeracao;
+    }
+
+    public JTextField getjTFCodBarra() {
+        return jTFCodBarra;
+    }
+
+    public void setjTFCodBarra(JTextField jTFCodBarra) {
+        this.jTFCodBarra = jTFCodBarra;
+    }
+
+    public JTextField getjTFID() {
+        return jTFID;
+    }
+
+    public void setjTFID(JTextField jTFID) {
+        this.jTFID = jTFID;
+    }
+
+    public JTextField getjTFNomeCliente() {
+        return jTFNomeCliente;
+    }
+
+    public void setjTFNomeCliente(JTextField jTFNomeCliente) {
+        this.jTFNomeCliente = jTFNomeCliente;
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -347,7 +360,7 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
                         .addGroup(midpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLId)
                             .addGroup(midpaneLayout.createSequentialGroup()
-                                .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTFID, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(36, 36, 36)
@@ -459,7 +472,7 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         bottompaneLayout.setHorizontalGroup(
             bottompaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bottompaneLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(218, Short.MAX_VALUE)
                 .addComponent(jButtonNew, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -482,20 +495,22 @@ public class CadastroCarteirinha extends javax.swing.JFrame {
         jBG.setLayout(jBGLayout);
         jBGLayout.setHorizontalGroup(
             jBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(toppane, javax.swing.GroupLayout.DEFAULT_SIZE, 1092, Short.MAX_VALUE)
+            .addComponent(toppane, javax.swing.GroupLayout.DEFAULT_SIZE, 1104, Short.MAX_VALUE)
             .addGroup(jBGLayout.createSequentialGroup()
-                .addGroup(jBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(bottompane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(midpane, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1092, Short.MAX_VALUE))
+                .addComponent(bottompane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jBGLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(midpane, javax.swing.GroupLayout.PREFERRED_SIZE, 1092, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jBGLayout.setVerticalGroup(
             jBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jBGLayout.createSequentialGroup()
                 .addComponent(toppane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(midpane, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(51, 51, 51)
                 .addComponent(bottompane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68))
         );
